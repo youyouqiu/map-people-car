@@ -1,0 +1,148 @@
+.editForm{
+  position: relative;
+  height: 100%;
+  // height: calc(100% - 100px);
+  // overflow-y: auto;
+}
+.spinning{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255,255,255,.6);
+  &.loading{
+    padding-top: 30%;
+    justify-content: flex-start;
+  }
+}
+.innerBox{
+  flex:1;
+  padding-bottom: 15px;
+  padding: 0 15px 15px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  &.detailInnerBox{
+      height: calc(100vh - 235px);
+      flex: auto;
+  }
+  .infoHeader{
+    margin: 15px 0;
+    padding: 2px 0;
+    text-align: center;
+    border: 1px solid #f0f0f0;
+    background-color: #eee;
+  }
+  .licensePhoto,.transportPhoto{
+    height: 200px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #eee;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .transportPhoto{
+    height: 100px;
+  }
+}
+
+.itemHeader{
+  font-weight: 600;
+}
+
+.itemContent{
+  padding-left: 50px;
+}
+.setParamBtn{
+  button{
+    min-width: 116px;
+    margin: 0 15px 15px 0;
+  }
+}
+.setStandardBtn{
+  display: block!important;
+  margin: 25px auto;
+  text-align: center;
+}
+
+.customTable{
+  th,td{
+    padding: 8px!important;
+    text-align: center!important;
+  }
+  :global(.ant-table-measure-row){
+    th,td{
+      padding: 0px!important;
+    }
+  }
+}
+.customForm{
+  :global(.ant-form-item-has-error){
+    border: none;
+  }
+  :global(.ant-form-item-with-help){
+   margin-bottom: 24px;
+  }
+}
+
+.btnMargin{
+  margin-left: 15px;
+}
+
+.divMargin{
+  margin-bottom: 15px;
+}
+
+.panelTitle{
+  height: 35px;
+  line-height: 35px;
+  margin-bottom: 15px;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.65);
+  background-color: #fafafa;
+}
+.tableForm{
+  :global(.ant-form-item){
+    margin-bottom: 0;
+  }
+}
+
+.formWrapper{
+  :global(.ant-form-item-explain){
+    width: 100%!important;
+    >div{
+      white-space: pre-wrap!important;
+    }
+  }
+}
+.readRegularForm{
+  :global(.ant-select-arrow){
+    display: none;
+  }
+}
+.redTxt{
+  margin: 0 3px;
+  color: red;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.customDiv{
+  :global(.ant-col-lg-14){
+    max-width: 100%;
+  }
+}
+
+.calibationTable{
+  :global(.ant-table-body){
+    min-height: 160px;
+  }
+}

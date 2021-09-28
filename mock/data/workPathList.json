@@ -1,0 +1,47 @@
+{
+    "code": 200,
+    "msg": "success",
+    "data": [{
+        "id": "1111111",
+        "status": 1,
+        "name": "中位道路清扫",
+        "audit": 1,
+        "org_id": "渝北区城管局",
+        "organization_code": "12333-5",
+        "create_data_username": "200A001",
+        "legal_person": "张三",
+        "contacts": "李四",
+        "phone": "15055551122",
+        "date_of_establishment": "2020-01-01",
+        "update_data_time": "2020-06-30 16:20:48",
+        "update_data_username": "admin"
+    }, {
+        "id": "222",
+        "status": 2,
+        "name": "中位道路清扫",
+        "audit": 1,
+        "org_id": "渝北区城管局",
+        "organization_code": "12333-5",
+        "create_data_username": "200A001",
+        "legal_person": "张三",
+        "contacts": "李四",
+        "phone": "15055551122",
+        "date_of_establishment": "2020-01-01",
+        "update_data_time": "2020-06-30 16:20:48",
+        "update_data_username": "admin"
+    }, {
+        "id": "333",
+        "status": 0,
+        "name": "中位道路清扫",
+        "audit": 0,
+        "org_id": "渝北区城管局",
+        "organization_code": "12333-5",
+        "create_data_username": "200A001",
+        "legal_person": "张三",
+        "contacts": "李四",
+        "phone": "15055551122",
+        "date_of_establishment": "2020-01-01",
+        "update_data_time": "2020-06-30 16:20:48",
+        "update_data_username": "admin"
+    }]
+}

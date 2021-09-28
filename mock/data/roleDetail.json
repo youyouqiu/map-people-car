@@ -1,0 +1,17 @@
+{
+    "code": 200,
+    "msg": "success",
+    "data": {
+        "id": "74696109890723840",
+        "code": "ROLE_1b4407f5-b699-46b9-ab73-e89c0cb86a03",
+        "numOfUser": 11,
+        "name": "666",
+        "priority": 1,
+        "description": "",
+        "editable": 1,
+        "createDataTime": "2020-06-05 18:47:20",
+        "createDataUsername": "t",
+        "updateDataTime": "2020-06-24 09:02:31",
+        "updateDataUsername": "t"
+    }
+}

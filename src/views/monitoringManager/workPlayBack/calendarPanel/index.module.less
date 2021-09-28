@@ -1,0 +1,97 @@
+.dateTime-pouple-container{
+  :global{
+    .ant-picker-calendar-mini .ant-picker-calendar-header{
+      padding: 0 0 8px 0;
+    }
+    .ant-picker-calendar-header .ant-picker-calendar-year-select,.ant-picker-calendar-header .ant-picker-calendar-month-select{
+      width: 100px;
+    }
+    .ant-picker-calendar-header .ant-picker-calendar-mode-switch{
+      display: none;
+    }
+    .ant-picker-content td{
+      border: 1px solid #f0f0f0;
+      padding: 0;
+      line-height: 16px;
+      height: auto;
+    }
+    .ant-picker-calendar-mini .ant-picker-content th{
+      line-height: 24px;
+    }
+    .ant-picker-calendar .ant-picker-panel .ant-picker-body{
+      padding: 0;
+    }
+    .ant-picker-calendar-full .ant-picker-panel .ant-picker-cell:hover .ant-picker-calendar-date{
+      background: transparent;
+    }
+    .ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner,.ant-picker-cell .ant-picker-cell-inner{
+      border-radius: 0;
+      display: block;
+      height: auto;
+      margin:0 auto;
+    }
+    .ant-picker-cell-inner .ant-picker-calendar-date-content{
+      margin-top: -10px;
+      transform: scale(0.9);
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      color: #1890ff;
+    }
+    .ant-picker-cell-in-view.ant-picker-cell-selected .ant-picker-cell-inner .ant-picker-calendar-date-content{
+      color: #fff!important;
+    }
+    .ant-picker-cell-in-view.ant-picker-cell-today .ant-picker-cell-inner::before{
+      display: none;
+    }
+  
+  
+    .ant-picker-date-panel .ant-picker-body{
+      padding: 0;
+    }
+    .ant-picker-date-panel .ant-picker-content{
+      width: 100%;
+    }
+    .ant-picker-dropdown{
+      position: static!important;
+    }
+    .ant-picker-cell .ant-picker-cell-inner{
+      line-height: 16px;
+      padding: 3px 0;
+      border-right: 1px solid #f0f0f0;
+      cursor: default;
+    }
+    .ant-picker-panel-container{
+      box-shadow: none;
+    }
+    .ant-picker-cell-today{
+      background-color: rgba(24, 144, 255, 0.25);
+    }
+    .ant-picker-cell-selected div{
+      color: #fff!important;
+    }
+    .ant-picker-cell::before{
+      height: 100%;
+      transform: none;
+      top: 0;
+    }
+    .ant-picker-cell-disabled::before{
+      background: #fff;
+    }
+    .ant-picker {
+      z-index: -100;
+    }
+  }
+  .dateTime-pouple-container{
+    & > div{
+      position: static!important;
+    }
+    // .empty{
+    // }
+  }
+}
+
+.dateTimeContainer-pouple{
+  margin-left: 10px;
+}
+

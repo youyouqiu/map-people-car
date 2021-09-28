@@ -1,0 +1,102 @@
+@import '../../../../less/base.less';
+
+.date-picker{
+    width:100%;
+}
+
+.detail-wrapper{
+    .flexbox();
+    height:100%;
+    position: relative;
+    
+    .left-box{
+        flex: 1;
+        background-color: #fff;
+        height:100%;
+        overflow: hidden;
+
+        .tit{
+            color:#333;
+        }
+        .con{
+            color: #DBD0CF;
+            margin-top:5px;
+        }
+    }
+
+    .right-box{
+        width:200px;
+        padding:25px;
+
+        .btn{
+            width:150px;
+            margin-top:20px;
+        }
+    }
+
+    // .tab-pane{
+    //     .flexbox();
+    //     .flex-direction(column);
+        
+    // }
+
+    .basic-box{
+        // .flexbox();
+        // .justify-content(space-between);
+        padding:0 20px;
+        // .align-items(center);
+        // height:50px;
+        // padding:20px;
+        .item{
+            flex:1;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+    }
+
+    .con-box{
+        padding:20px;
+        .tit{
+            margin-top:20px;
+        }
+    }
+    :global(.ant-tabs-bar) {
+        margin: 0;
+    }
+}
+
+.loading{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255,255,255,.6);
+}
+
+.initTable{
+    width: 450px;
+    border: 1px solid #444;
+    border-spacing: 0;
+
+    td {
+        border: 1px solid #444;
+    }
+}  
+//   .initTable td {
+//     border: 1px solid #444;
+//   }
+//   .initTable td :global(.ant-row .ant-form-item) {
+//       margin: 0;
+//   }
+  
+//   .initTable tr td:last-child {
+//     // border-right: 0;
+//   }
+//   .initTable tr:last-child td {
+//     // border-bottom: 0;
+//   }

@@ -1,0 +1,30 @@
+export interface IDetail {
+    id?: number;
+    pid?: number | string;
+    name?: string;
+    organizationCode?: string;
+    upOrganizationCode?: string;
+    industryId?: number;
+    scopeOfOperation?: string;
+    businessLicenseNo?: string;
+    issuingOrgan?: string;
+    licenseValidityStartDate?: any;
+    licenseValidityEndDate?: any;
+    operatingState?: number;
+    provinceName?: string;
+    provinceCode?: string;
+    cityName?: string;
+    cityCode?: string;
+    countyName?: string;
+    countyCode?: string;
+    areaNumber?: string;
+    registerDate?: any;
+    principal?: string;
+    principalPhone?: string;
+    contactName?: string;
+    phone?: string;
+    address?: string;
+    remark?: string;
+    structureTree?: string;
+    [key: string]: any;
+}

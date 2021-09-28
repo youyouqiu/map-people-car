@@ -1,0 +1,33 @@
+{
+    "code": 200,
+    "msg": "success",
+    "data": {
+        "facilityStatistic": [
+            {
+                "intelligentNum": 0,
+                "totalNum": 0,
+                "typeId": 0,
+                "typeName": "垃圾桶"
+            }
+        ],
+        "peopleStatistic": {
+            "curShiftNum": 0,
+            "offWorkNum": 0,
+            "onWorkNum": 0,
+            "totalShiftNum": 0
+        },
+        "statisticTime": "2020-07-28T03:27:29.341Z",
+        "vehicleStatistic": {
+            "curShiftNum": 0,
+            "offWorkNum": 0,
+            "onWorkNum": 0,
+            "totalShiftNum": 0
+        },
+        "workObject": {
+            "id": 0,
+            "name": "string",
+            "type": 0,
+            "typeName": "string"
+        }
+    }
+}

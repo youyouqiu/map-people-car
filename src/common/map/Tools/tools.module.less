@@ -1,0 +1,127 @@
+.tools{
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        width: 100%;
+        padding: 7px 5px;
+        border: 1px solid #efefef;
+        background: #fff;
+    img{
+        width: 20px;
+        margin-right: 3px;
+    }
+    cursor: pointer;
+    .left{
+        display: flex;
+        justify-content: flex-start;
+        > div {
+            margin-right: 8px;
+            padding: 6px 20px;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 0 3px 0 #f1f1f1;
+            align-items: center;
+            border-radius: 4px;
+            border: 1px solid #cecece;
+        }
+        .active{
+            background: #68c8ff;
+            color: #fff;
+            border: none;
+        }
+        .fullbox{
+            display: flex;
+            align-items: center;
+            .full{
+                font-size: 18px;
+                line-height: 18px;
+                margin-right: 4px;
+            }
+        }
+        
+    }
+    .right{
+        display: flex;
+        justify-content: right;
+        margin-left: 12px;
+    }
+}
+
+.imgBox{
+    position: absolute;
+    z-index: 100;
+    background: #fff;
+    right: 22px;
+    top: 63px;
+    border-radius: 4px;
+    padding: 7px;
+    box-shadow: 0 0 4px 1px #676767;
+    img{
+        margin: 0;
+        width: 20px;
+    }
+}
+
+.district{
+    width: 320px;
+    position: absolute;
+    top: 66px;
+    z-index: 10;
+    left: 74px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 3px 3px 6px 0 #444444;
+    .title{
+        padding: 12px 12px;
+        font-size: 16px;
+        color: #717171;
+        border-bottom: 1px solid #c7c7c7;
+    }
+    .content{
+        border-bottom: 1px solid #e0e0e0;
+        padding: 6px 0 13px 0;
+        margin-bottom: 12px;
+        .item{
+            display: flex;
+            margin: 12px 0;
+            justify-content: center;
+            &:first-child{
+                .left{
+                    position: relative;
+                    &::before{
+                        content: "*";
+                        position: absolute;
+                        left: -11px;
+                        top: 2px;
+                        bottom: 0;
+                        margin: auto;
+                        color: red;
+                    }
+                }
+            }
+            .left{
+                line-height: 32px;
+            }
+            .right{
+                width: 72%;
+            }
+        }
+    }
+    .bottom{
+        display: flex;
+        justify-content: flex-end;
+        margin: 6px;
+    }
+}
+
+.fullscreen{
+    height: calc(100% - 111px);
+    position: absolute;
+    width: 100%;
+    top: 59px;
+    z-index: 1000;
+}
+.dropdownFix{
+    z-index: 10005;
+}
+

@@ -1,0 +1,78 @@
+.container{
+  display: flex;
+  height: 100%;
+  overflow: auto;
+  position: relative;
+  margin-top: 12px;
+}
+
+.orgTree{
+  transition: all .3s ease-in-out;
+  width: 300px;
+  height: 100%;
+}
+
+.treeBtn {
+  position: absolute;
+  padding: 8px;
+  transition: all .3s;
+  left: -3px;
+  top: 3px;
+  z-index: 99;
+}
+
+.rightBox{
+  height: 100%;
+  transition: all .3s ease-in-out;
+}
+
+.color{
+  color:#8e8e8e;
+  margin-left: 20px;
+}
+
+.title{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #e6e6e6;
+  padding: 10px 0;
+  font-weight: bold;
+}
+
+.name{
+  background-color: #e6e6e6;
+  text-align: center;
+  color:#6f6f6f;
+  padding: 6px;
+}
+
+
+:global(.ant-list-item){
+  padding: 0;
+}
+
+:global(.ant-collapse-content > .ant-collapse-content-box){
+  padding: 8px 16px 8px 16px;
+}
+
+:global(.ant-descriptions-row > td){
+  padding: 10px 0 10px 0;
+}
+
+:global(.ant-descriptions-item){
+  vertical-align: middle;
+}
+
+:global(.ant-descriptions-item-container .ant-descriptions-item-content){
+  display:block
+}
+
+
+.preview{
+  :global(.ant-modal-footer button + button){
+  display: none;
+  }
+}
+
+
+

@@ -1,0 +1,62 @@
+@import '../../less/base.less';
+.detailBox{
+  :global(.ant-input-affix-wrapper){
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+  input[readonly] {
+    cursor: default;
+  }
+}
+.noInfo{
+    text-align: center;
+}
+.itemTable{
+    width: 100%;
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+    th{
+      min-width: 80px;
+      padding: 0 5px;
+      text-align: center;
+      border: 1px solid #f0f0f0;
+      background-color: #fafafa;
+      // overflow: hidden;
+      // text-overflow: ellipsis;
+      // white-space: nowrap;
+      .redIcon{
+        margin-right: 2px;
+        vertical-align: -2px;
+        color: #ff4d4f;
+      }
+      &.tableHeader{
+        height: 35px;
+        font-size: 15px;
+        width: 100%;
+      }
+    }
+    td{
+      min-width: 60px;
+      padding: 1px;
+      color: #888;
+      word-break: break-all;
+      border: 1px solid #f0f0f0;
+      :global(.ant-form-item){
+        margin-bottom: 0;
+      }
+      :global(.ant-input-affix-wrapper){
+        border: none;
+        border-radius: 0;
+      }
+      :global(.ant-form-item-control-input-content){
+        overflow: hidden;
+      }
+      :global(.ant-form-item-explain){
+        padding-left: 11px;
+      }
+      :global(.ant-radio-group){
+        padding: 0 11px;
+      }
+    }
+}

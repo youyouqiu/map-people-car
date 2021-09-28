@@ -1,0 +1,83 @@
+// @import '../../../../less/base.less';
+@import '../../../../../less/base.less';
+
+.date-picker {
+    width: 100%;
+}
+
+.detail-wrapper {
+    .flexbox();
+    height: 100%;
+    position: relative;
+
+    .left-box {
+        flex: 1;
+        background-color: #fff;
+        height: 100%;
+        overflow: hidden;
+
+        .tit {
+            color: #333;
+        }
+        .con {
+            color: #dbd0cf;
+            margin-top: 5px;
+        }
+    }
+
+    .right-box {
+        width: 200px;
+        padding: 25px;
+
+        .btn {
+            width: 150px;
+            margin-top: 20px;
+        }
+    }
+
+    // .tab-pane{
+    //     .flexbox();
+    //     .flex-direction(column);
+
+    // }
+
+    .basic-box {
+        .flexbox();
+        .justify-content(space-between);
+        padding: 0 20px;
+        // .align-items(center);
+        // height:50px;
+        // padding:20px;
+
+        .item {
+            flex: 1;
+            overflow: hidden;
+        }
+    }
+
+    .con-box {
+        margin-top: 16px;
+        border-top: 1px solid @borderColor;
+        padding: 20px;
+        .tit {
+            margin-top: 20px;
+        }
+    }
+}
+.contract {
+    :global(.ant-input-group-addon) {
+        border: none;
+    }
+}
+.loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.6);
+}

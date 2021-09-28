@@ -1,0 +1,38 @@
+@import '../../less/base.less';
+.search-monitor-tree{
+    height:100%;
+    width:100%;
+    .flexbox();
+    .flex-direction(column);
+
+    .search-input{
+        .flexbox();
+    }
+
+    .tree-box{
+        position: relative;
+        margin-top:10px;
+        flex:1;
+        overflow-y: auto;
+        border:1px solid @borderColor;
+    }
+
+    .treeIcon{
+        width:15px;
+        height:15px;
+        vertical-align: middle;
+    }
+}
+
+.loading{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255,255,255,.6);
+}

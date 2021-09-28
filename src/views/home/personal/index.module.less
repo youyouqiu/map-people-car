@@ -1,0 +1,163 @@
+@import '../../../less/base.less';
+
+@lw:380px;//left宽度
+@lm:15px;//left与right间margin
+
+.personal-wrap{
+    .flexbox;
+    .flex-direction(row);
+    height:100%;
+    padding:15px;
+}
+
+.personal-left{
+    width:@lw;
+    background-color: #fff;
+    padding:25px;
+    margin-right:@lm;
+    height:100%;
+    overflow: auto;
+    .head-box{
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .user-name{
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .user-company{
+        color:#999;
+        text-align: center;
+    }
+
+    .personal-list-box{
+        padding: 20px;
+    }
+    .personal-list{
+        list-style: none;
+        margin:0;
+        padding:0;
+
+        .item{
+            line-height:35px;
+            .ellipse();
+        }
+
+
+        .tit{
+            margin-right:10px;
+        }
+    }
+    .title{
+        color:#5a5a5a;
+        font-weight: 600;
+        text-decoration: underline;
+        text-align: left;
+    }
+    .tag{
+        border: 1px solid #eee;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+.personal-right{
+    :global(.ant-tabs){
+        width:100%;
+    }
+    :global(.ant-tabs-content){
+       overflow-y: auto;
+    }
+    .flexbox;
+    .flex-direction(row);
+    flex:1;
+    background-color: #fff;
+    padding:25px;
+
+    .form{
+        flex:1;
+        margin-top:10px;
+    }
+
+    .head-box{
+        width:110px;
+        height:110px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin:0px auto;
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+        margin-top:-38px;
+
+        .upload-box{
+            position:absolute;
+            width:100%;
+            height:100%;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+            .rgba(0,0);
+            .bg-rgba(rgba(#000, 0.5));
+            transition: all .3s;
+            z-index: 20;
+        }
+        .upload{
+            display: inline-block;
+            width:110px;
+            height:110px;
+            line-height:110px;
+            color:#fff;
+        }
+
+        &:hover{
+            .upload-box{
+                .rgba(1,100);
+            }
+        }
+    }
+}
+
+/*** ie***/
+.photoMargin{
+    width: 40px;
+    margin-top: 30px;
+}
+
+.photoWidth{
+    width:300px;
+    margin-bottom: 31px;
+}
+
+.formLabel{
+    width: 100px;
+    position: relative;
+    margin-top: 50px;
+}
+
+.formInput{
+    width: 265px;
+    height:32px;
+    position: absolute;
+    left:-100px;
+    top:40px
+}
+
+.fromButtom{
+    position: relative;
+    top:30px
+}
+
+.passWordBtn{
+    position: relative;
+    top:30px;
+    left:-64px;
+    
+}
+
+
+
+

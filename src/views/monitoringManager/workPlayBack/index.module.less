@@ -1,0 +1,612 @@
+.monitoringContainer{
+  display: flex;
+  height: 100%;
+  .trackDateTime{
+    min-height: 310px;
+    position: relative;
+    .date-mileage{
+      color: rgb(24, 144, 255);
+    }
+  }
+  // 左侧组织树
+  .trackMonitorTree{
+    flex: 1;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+  .leftSide{
+      width: 301px;
+      border-right: 1px solid #f0f0f0;
+      transition: all .3s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      &.leftHide{
+          margin-left: -301px;
+      }
+      .treeContainer{
+          height: 100%;
+          overflow: auto;
+          background-color: #f3f3f3;
+      }
+  }
+  .rightSide{
+      flex: 1;
+      position: relative;
+      .toggleIcon{
+          position: absolute;
+          left: 10px;
+          top: 10px;
+          padding: 5px 10px;
+          cursor: pointer;
+          z-index: 9;
+          border-radius: 4px;
+          border: 1px solid #f0f0f0;
+          background-color: #fff;
+          .arrowIcon{
+              color: #888;
+              transition: all .3s ease-in-out;
+              &.arrowRotate{
+                  transform: rotate(180deg);
+              }
+          }
+          &:hover .arrowIcon{
+              color: #1890ff;
+          }
+      }
+      :global{
+        .ant-spin-nested-loading,.ant-spin-container{
+          height: 100%;
+        }
+      }
+      // 右侧内容区域
+      .rightContainer{
+        :global(.ant-tabs-nav){
+          margin: 0;
+          padding-left: 20px;
+        }
+          position: relative;
+          height: 100%;
+          overflow: hidden;
+          // 顶部统计数据
+          .statisticsContainer{
+              position: absolute;
+              width: 60%;
+              top: 0;
+              left: 20%;
+              z-index: 10;
+              transition: all .1s ease-in-out;
+              .topstatisticsBox{
+                  padding: 10px;
+                  border-radius: 0 0 10px 10px;
+                  border: 1px solid #f0f0f0;
+                  border-top: none;
+                  box-shadow: 1px 1px 3px #f0f0f0;
+                  background-color: #fff;
+              }
+              .topHeader{
+                  display: flex;
+                  margin-bottom: 5px;
+                  justify-content: space-between;
+              }
+              .lockIcon{
+                  font-size: 18px;
+                  color: #1890ff;
+                  cursor: pointer;
+                  &.cancelLock{
+                      color: #555;
+                      &:hover{
+                          color: #1890ff;
+                      }
+                  }
+              }
+              .itemNum{
+                  text-align: center;
+                  h4{
+                      font-weight: bold;
+                      margin-bottom: 5px;
+                  }
+              }
+              .hoverArea{
+                  height: 20px;
+                  display: none;
+              }
+              &.hideStatistics{
+                  top: -110px;
+                  .hoverArea{
+                      display: block;
+                  }
+                  &:hover{
+                      top:0,
+                  }
+              }
+          }
+          // 作业内容
+          .workContentBox{
+              position: absolute;
+              right: 10px;
+              top: 60px;
+              z-index: 20;
+              width: 150px;
+              border-radius: 4px;
+              overflow: hidden;
+              border: 1px solid #f3f3f3;
+              background-color: #fff;
+              h3{
+                  position: relative;
+                  z-index: 10;
+                  margin: 0;
+                  padding: 6px 10px;
+                  font-size: 14px;
+                  font-weight: bold;
+                  text-align: center;
+                  cursor: pointer;
+                  border-bottom: 1px solid #f3f3f3;
+                  background-color: #f2f2f2;
+              }
+              .workContent{
+                padding: 6px 6px 0;
+                height: 120px;
+                transition: all .3s ease-in;
+                &.hideMenu{
+                  margin-top: -120px;
+                }
+              }
+              ul{
+                  overflow-y: auto;
+                  li{
+                      margin-bottom: 6px;
+                      padding: 6px;
+                      font-size: 13px;
+                      font-weight: bold;
+                      overflow: hidden;
+                      text-overflow: ellipsis;
+                      white-space: nowrap;
+                      cursor: pointer;
+                      background-color: #f2f2f2;
+                      span{
+                          color:#1890ff;
+                      }
+                      &.activeWork{
+                          color:#1890ff;
+                      }
+                      &:hover{
+                          color:#1890ff;
+                      }
+                  }
+              }
+              :global{
+                .ant-empty-normal{
+                  margin: 16px 0;
+                }
+              }
+          }
+          //查询区域
+          .trackDatetimeSearch{
+            position: absolute;
+              left: 0;
+              top: 50%;
+              z-index: 20;
+              overflow: hidden;
+              
+              display: flex;
+              text-align: right;
+              :global{
+                .ant-form-item{
+                  margin-bottom: 15px;
+                }
+              }
+              .searchForm{
+                width: 350px;
+                  overflow-y: auto;
+                  transition: all .3s ease-in;
+                  background-color: #fff;
+                  opacity: 1;
+                  &.hideMenu{
+                    width: 0;
+                    opacity: 0;
+                  }
+                  .searchFormContainer{
+                    padding: 10px 10px 0;
+                  }
+              }
+              .trackDatetimeSearchBtn{
+                padding: 10px;
+                width: 40px;
+                white-space: normal;
+                height: 85px;
+                border-bottom-right-radius: 6px;
+                border-top-right-radius: 6px;
+                :global{
+                  span{
+                    margin: 0;
+                  }
+                }
+              }
+          }
+          // 地图
+          .mapContainer{
+              height: 100%;
+              :global(.amap-info-content){
+                  padding: 0;
+                  border-radius: 4px;
+              }
+              :global(.amap-info-close){
+                  display: none;
+              }
+          }
+          // 地图设置
+          .toolBox{
+              position: absolute;
+              bottom: 10px;
+              left: 10px;
+              z-index: 99;
+              height: 35px;
+              padding-right: 35px;
+              cursor: pointer;
+              align-items: center;
+              .menuBox {
+                  overflow-x: hidden;
+                  .btn{
+                      float: right;
+                      display: flex;
+                      margin-right: 5px;
+                      align-items: center;
+                      height: 35px;
+                      padding: 4px 15px;
+                      border-radius: 4px;
+                      transition: all .3s ease-in-out;
+                      &.setHide{
+                          margin-right: -200px;
+                      }
+                  }
+                  img{
+                      width: 18px;
+                      margin-right: 4px;
+                  }
+                  .mapTypeMenu{
+                      width: 110px;
+                      font-size: 13px;
+                  }
+              }
+              .imgBox {
+                  position: absolute;
+                  display: flex;
+                  right: 0;
+                  top: 0;
+                  z-index: 10;
+                  width: 35px;
+                  height: 35px;
+                  justify-content: center;
+                  align-items: center;
+                  border-radius: 4px;
+                  border: 1px solid #c4c4c4;
+                  background-color: #fff;
+                  img{
+                      width: 57%;
+                  }
+              }
+          }
+          // 轨迹控制
+          .trackControl{
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 300px;
+            margin-left: -150px;
+            z-index: 99;
+            .playControlProgress{
+                // position: absolute;
+                left: 0;
+                right: 0;
+                // top: -8px;
+                width: 245px;
+                margin: 0 auto;
+                z-index: 9;
+                cursor: pointer;
+            }
+            .playControlContainer{
+                position: relative;
+                background: rgba(95,95,95,0.9);
+                color: #fff;
+            }
+            .playControlButton{
+                display: flex;
+                justify-content: center;
+                padding: 12px 8px 8px;
+                div{
+                  width: 36px;
+                  height: 36px;
+                  border-radius: 36px;
+                  background-repeat: no-repeat;
+                  background-size: 12px auto;
+                  background-position: center center;
+                  border: 1px solid #6dcff6;
+                  background-color: #fff;
+                  color: #6dcff6;
+                  margin: 0 8px;
+                  cursor: pointer;
+                }
+                .playControlBackward{
+                  background-image: url('../../../static/image/play-prev.svg');
+                }
+                .playControlStart{
+                  background-image: url('../../../static/image/play-play.svg');
+                  background-color: #87cdf2;
+                }
+                .playControlPause{
+                  background-image: url('../../../static/image/play-pause.svg');
+                  background-color: #87cdf2;
+                }
+                .playControlReset{
+                  background-image: url('../../../static/image/play-stop.svg');
+                }
+                .playControlForward{
+                  background-image: url('../../../static/image/play-next.svg');
+                }
+              }
+              
+              .playControlTriple{
+                  background-color: #fff;
+                  line-height: 28px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+              }
+          }
+          .playControlShrink{
+            position: absolute;
+            bottom: -40px;
+            color: #6dcff6;
+            cursor: pointer;
+            background-color: #fff;
+            padding: 5px 10px;
+              right: 10px;
+              z-index: 99;
+          }
+          .trackPlayback-map,.trackPlayback-table{
+            position: absolute;
+            width: 100%;
+            left: 0;
+            right: 0;
+            background-color: #fff;
+          }
+          .trackPlayback-map{
+            top: 0;
+            bottom: 44px;
+          }
+          .drag-bar{
+            width:100%;
+            height:4px;
+            margin: 0;
+            background: rgb(204, 204, 204);
+            cursor: n-resize;
+            z-index: 999;
+          }
+          .trackPlayback-table{
+            bottom: 0;
+            min-height: 4px;
+          }
+          .trackPlayback-table-container{
+            padding-bottom: 10px;
+            padding-right: 10px;
+            width: 100%;
+            height: calc(100% - 4px);
+            overflow: hidden;
+            // overflow: auto;
+          }
+          //进度条
+          .videoProgressBox {
+            width:calc(100% - 20px);
+            height: 220px;
+            margin: 10px auto 0 auto;
+            overflow-y: scroll;
+          }
+      }
+  }
+  :global{
+    .hasMileage{
+      background-color: rgba(24, 144, 255, 0.25);
+    }
+    .amap-marker-label{
+      border: 0;
+      background-color: transparent;
+    }
+    .label-info{
+      position: relative;
+      top: 0;
+      right: 0;
+      min-width: 0;
+      padding: 5px 8px;
+      background: rgba(0,0,0,0.7);
+      color: #fff;
+    }
+    .ant-picker + div{
+      position: static!important;
+    }
+  }
+  // 轨迹地图
+.trackMap-container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .amapSizeSmall{
+      width: calc(100% - 850px);
+      height: 100%;
+      position: inherit;
+    }
+    .amapSizeBig{
+      width: 100%;
+      height: 100%;
+      position: inherit;
+    }
+    .playControlContainer{
+      background: rgba(95,95,95,0.9);
+      position: absolute;
+      // right: 0;
+      bottom: 0;
+      // padding: 10px 30px 0 30px;
+      // border-radius: 5px;
+    }
+    .playControlButton{
+      display: flex;
+      div{
+        width: 45px;
+        height: 45px;
+        border-radius: 45px;
+        background-repeat: no-repeat;
+        background-size: 16px auto;
+        background-position: center center;
+        border: 2px solid #6dcff6;
+        background-color: #fff;
+        margin: 0 5px;
+        cursor: pointer;
+      }
+      div.playControlBackward{
+        background-image: url('../../../static/image/play-prev.svg');
+      }
+      div.playControlStart{
+        background-image: url('../../../static//image/play-play.svg');
+        background-color: #87cdf2;
+      }
+      div.playControlPause{
+        background-image: url('../../../static/image/play-pause.svg');
+        background-color: #87cdf2;
+      }
+      div.playControlReset{
+        background-image: url('../../../static/image/play-stop.svg');
+      }
+      div.playControlForward{
+        background-image: url('../../../static/image/play-next.svg');
+      }
+    }
+    .playControlProgress{
+      display: flex;
+      align-items: center;
+      color: #fff;
+      .playControlBar{
+        flex: 1;
+      }
+    }
+  }
+}
+
+.monitorName{
+  padding: 2px 6px;
+  color: #fff;
+  border-radius: 3px;
+  white-space: nowrap;
+  font-size: 13px;
+  background-color: rgba(73, 63, 63, 0.4);
+}
+
+// 地图监控对象信息弹窗
+.mapInfoWindow{
+  width: 360px;
+  h3{
+      display: flex;
+      margin: 0;
+      padding: 12px;
+      align-items: center;
+      justify-content: space-between;
+      .name{
+          flex: 1;
+      }
+      img{
+          width: 20px;
+      }
+      .time{
+          font-size: 12px;
+          color: #888;
+      }
+  }
+  .windowContent{
+      padding: 12px 20px;
+      border-top: 1px solid #f0f0f0;
+      border-bottom: 1px solid #f0f0f0;
+      .topInfo{
+          display: flex;
+          .leftInfo{
+              flex: 1;
+          }
+          .rightImg{
+              width: 100px;
+              padding: 10px;
+              border: 1px solid #f0f0f0;
+              img{
+                  width: 100%;
+              }
+          }
+      }
+      .infoItem{
+          display: flex;
+          margin-bottom: 10px;
+          color: #888;
+          .itemName{
+              width: 90px;
+              color: #555;
+              font-weight: bold;
+          }
+          span:last-child{
+              flex: 1;
+          }
+      }
+  }
+  .windowFooter{
+      display: flex;
+      justify-content: flex-end;
+      padding: 12px 0 12px 12px;
+      div{
+          display: flex;
+          justify-content: flex-end;
+      }
+      button{
+          display: flex;
+          height: 30px;
+          align-items: center;
+          margin-right: 10px;
+          padding: 2px 6px;
+          color: #1890ff;
+          cursor: pointer;
+          border-radius: 4px;
+          outline: none;
+          border: 1px solid #1890ff;
+          background-color: transparent;
+          img{
+              width: 16px;
+              margin-right: 6px;
+              &.trajectory{
+                  width: 15px;
+              }
+          }
+      }
+  }
+}
+
+.greenyellow{
+  color: greenyellow;
+}
+.green{
+  color: green;
+}
+.yellow{
+  color: yellow;
+}
+.red{
+  color: red;
+}
+.blue{
+  color:#1890ff;
+}
+
+.activeColor{
+    background: #dcf5ff !important;
+    border-radius: 5px;
+}
+
+:global(.ant-tabs-bar){
+  margin: 0 0 5px 0;
+}
+
+// :global(.ant-tabs-nav){
+//   margin-left: 10px;
+// }

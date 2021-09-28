@@ -1,0 +1,65 @@
+.transferBox {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    > div {
+        padding: 10px;
+        padding-bottom: 0;
+    }
+    .left {
+        height: 100%;
+        width: 45%;
+        border: 1px solid #cecece;
+        border-radius: 2px;
+        .table {
+            height: 510px;
+            overflow: auto;
+            th {
+                text-align: center;
+            }
+            .wrongRow {
+                background: #ffdfdf;
+            }
+            .wrongRow:hover {
+                background: #ffdfdf;
+            }
+        }
+    }
+    .middle {
+        height: 100%;
+        width: 6%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        height: 100%;
+        align-self: center;
+        p {
+            height: 30px;
+            width: 30px;
+            overflow: hidden;
+            font-size: 18px;
+            border-radius: 2px;
+            display: flex;
+            justify-content: center;
+            line-height: 27px;
+            color: #fff;
+            cursor: default;
+        }
+    }
+    .right {
+        height: 100%;
+        width: 45%;
+        border: 1px solid #cecece;
+        border-radius: 2px;
+        .table {
+            height: 510px;
+            overflow: auto;
+            th {
+                text-align: center;
+            }
+        }
+    }
+}

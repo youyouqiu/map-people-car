@@ -1,0 +1,405 @@
+// @import '../../framework/skin/index.less';
+
+//   .login-bg {
+//       display: flex;
+//       background: url('../../static/image/bg.jpg') no-repeat;
+//       background-size: cover;
+//       height: 100vh;
+//       width:100%;
+
+//       .login-place {
+//         max-width: 400px;
+//         margin: 150px auto 0 auto;
+//         z-index:1;
+//       }
+
+//       .logo {
+//         text-align: center;
+//         margin-bottom: 15px;
+//       }
+
+//       .login-form {
+//           max-width: 400px;
+//           margin: auto;
+//           background: rgba(255, 255, 255, 0.7);
+//           padding: 15px 30px 30px 30px;
+//           z-index:1;
+//           border: 1px solid rgba(238, 238, 238, 0.5);
+//           border-radius: 5px;
+//           .login-title {
+//             text-align: center;
+//             color: #000;
+//             border-bottom: 1px solid #cfcfcf;
+//           }
+//           .login-title h3 {
+//             color: #000;
+//             font-size: 21px;
+//             text-shadow: -1px 0 rgba(255,255,255,.5), 0 1px rgba(255,255,255,.5), 1px 0 rgba(255,255,255,.5), 0 -1px rgba(255,255,255,.5);
+//           }
+//           .login-userName {
+//             margin: 25px 0 0 20px;
+//             width: 300px;
+//             border: 1px solid #cfcfcf;
+//             border-radius: 4px;
+//             padding: 6.5px 7px;
+//             opacity: 0.9;
+//             background-color: #e6f6ff;
+//           }
+//           .login-passWord {
+//             margin: 15px 0 15px 20px;
+//             width: 300px;
+//             border: 1px solid #cfcfcf;
+//             border-radius: 4px;
+//             padding: 6.5px 7px;
+//             opacity: 0.9;
+//             background-color: #e6f6ff;
+//           }
+//           .login-userName span {
+//             margin-right: 5px;
+//         }
+//           .login-passWord span {
+//             margin-right: 5px;
+//           }
+//           .login-button {
+//             width: 296px;
+//             height: 40px;
+//             margin: 15px 0 0 22px;
+//             background-color: rgb(81, 78, 95);
+//             color: #fff;
+//             border-radius: 3px;
+//             border: 1px solid rgb(81, 78, 95);
+//           }
+//           .login-slider {
+//               margin: 0 auto;
+//               width: 88%;
+//               height: 40px;
+//               position: relative;
+//               background-color: rgba(255, 255, 255, 0.3);
+//               border: 1px solid #cfcfcf;
+//               border-radius: 4px;
+//           }
+//           .slider-labelTip {
+//               width: 100%;
+//               height: 100%;
+//               text-align: center;
+//               color: #787878;
+//               font-size: 13px;
+//               line-height: 40px;
+//               position: absolute;
+//               z-index: 2;
+//               border-radius: 4px;
+//               pointer-events:none;
+//               user-select:none;
+//               background: -webkit-gradient(linear, left top, right top, color-stop(0, #4d4d4d), color-stop(.4, #4d4d4d), color-stop(.5, #fff), color-stop(.6, #4d4d4d), color-stop(1, #4d4d4d));
+//               -webkit-background-clip: text;
+//               -webkit-text-fill-color: transparent;
+//               -webkit-animation: slidetounlock 3s infinite;
+//               -webkit-text-size-adjust: none
+              
+//           }
+//           .slider-label {
+//               position: absolute;
+//               top: 0;
+//               width: 40px;
+//               height: 38px;
+//               border-top: none;
+//               border-bottom: none;
+//               border-left: none;
+//               border-right: 1px solid #cfcfcf;
+//               background: #fff url('../../static/image/codee.png') no-repeat center;
+//               z-index: 3;
+//               cursor: move;
+//           }
+//           .slider-success {
+//             position: absolute;
+//             top: 0;
+//             width: 40px;
+//             height: 38px;
+//             border-top: none;
+//             border-bottom: none;
+//             border-left: 1px solid #cfcfcf;
+//             border-right: none;
+//             background: #fff url('../../static/image/codes.png') no-repeat center;
+//             z-index: 3;
+//             cursor: move;
+//           }
+//           .logo {
+//             width:100%;
+//             height:100%;
+//             float: left;
+//           }
+//           .hint {
+//             color:red;
+//             text-align: center; 
+//           }
+//           .sliderBg {
+//             position: absolute;
+//             height: 100%;
+//             background: rgba(255,255,255,.5);
+//             z-index:1
+//           }
+
+//           @-webkit-keyframes slidetounlock {
+//             0% {
+//               background-position: -113px 0
+//             }
+//             to {
+//               background-position: 113px 0
+//             }
+//           }
+//       }
+
+//       .login-fonter {
+//          z-index: 2;
+//          position: absolute;
+//          width:100%;
+//          color:#2d2d2d;
+//          font-size:9pt;
+//          text-align: center;
+//          bottom: 2%;
+//          color:rgb(210, 223, 239);
+//          text-shadow: rgb(26, 23, 30) -1px 0px, rgb(26, 23, 30) 0px 1px, rgb(26, 23, 30) 1px 0px, rgb(26, 23, 30) 0px -1px;
+         
+//          .outerJoin{
+//           color:rgb(210, 223, 239);
+//           text-shadow: rgb(26, 23, 30) -1px 0px, rgb(26, 23, 30) 0px 1px, rgb(26, 23, 30) 1px 0px, rgb(26, 23, 30) 0px -1px;
+//         }
+        
+//         .outerJoin:hover{
+//           text-decoration:underline;
+//         }
+//       }
+
+//       .login-footer,.login-footer a{
+//         position: absolute;
+//         bottom: 2%;
+//         text-shadow: rgb(210, 210, 214) -1px 0px, rgb(210, 210, 214) 0px 1px, rgb(210, 210, 214) 1px 0px, rgb(210, 210, 214) 0px -1px;
+//         color:rgb(122, 125, 134);
+//         width: 400px;
+//       }
+  
+//       .login-footer a{
+//         width: 143px;
+//         margin-left: 143px;
+//       }
+
+//       .login-footer a:hover{
+//         text-decoration:underline
+//       }
+
+      
+//         :global(.ant-input-affix-wrapper > input.ant-input){
+//           background-color: #e6f6ff;
+//         }
+      
+      
+//   }
+
+@import '../../framework/skin/index.less';
+
+  .login-bg {
+      display: flex;
+      // background: url('../../static/image/bg.jpg') no-repeat;
+      background-size: cover;
+      height: 100vh;
+      width:100%;
+      position: relative;
+
+      .login-place {
+        max-width: 400px;
+        margin: 150px auto 0 auto;
+        z-index:1;
+      }
+
+      .logo {
+        text-align: center;
+        margin-bottom: 15px;
+        position: absolute;
+        user-select: none;
+        img{
+          width: 240px;
+          height: 78px;
+        }
+      }
+
+      .login-form {
+          max-width: 400px;
+          background: rgba(255, 255, 255, 0.7);
+          padding: 15px 30px 30px 30px;
+          z-index:1;
+          border: 1px solid rgba(238, 238, 238, 0.5);
+          position: absolute;
+          border-radius: 5px;
+          .login-title {
+            text-align: center;
+            color: #000;
+            border-bottom: 1px solid #cfcfcf;
+            user-select: none;
+          }
+          .login-title h3 {
+            color: #000;
+            font-size: 21px;
+            text-shadow: -1px 0 rgba(255,255,255,.5), 0 1px rgba(255,255,255,.5), 1px 0 rgba(255,255,255,.5), 0 -1px rgba(255,255,255,.5);
+          }
+          .login-userName {
+            margin: 15px 0 0 20px;
+            width: 300px;
+            border: 1px solid #cfcfcf;
+            border-radius: 4px;
+            padding: 6.5px 7px;
+            opacity: 0.9;
+            background-color: #e6f6ff;
+            user-select: none;
+          }
+          .login-passWord {
+            margin: 15px 0 15px 20px;
+            width: 300px;
+            border: 1px solid #cfcfcf;
+            border-radius: 4px;
+            padding: 6.5px 7px;
+            opacity: 0.9;
+            background-color: #e6f6ff;
+            user-select: none;
+          }
+          .login-userName span {
+            margin-right: 5px;
+        }
+          .login-passWord span {
+            margin-right: 5px;
+          }
+          .login-button {
+            width: 296px;
+            height: 40px;
+            margin: 15px 0 0 22px;
+            background-color: rgb(81, 78, 95);
+            color: #fff;
+            border-radius: 3px;
+            border: 1px solid rgb(81, 78, 95);
+          }
+          .logo {
+            width:100%;
+            height:100%;
+            float: left;
+          }
+          .hint {
+            color:red;
+            text-align: center; 
+            margin-top: 15px;
+          }
+      }
+
+      .login-fonter {
+         z-index: 2;
+         position: absolute;
+         width:100%;
+         color:#2d2d2d;
+         font-size:9pt;
+         text-align: center;
+         bottom: 2%;
+         color:rgb(210, 223, 239);
+         text-shadow: rgb(26, 23, 30) -1px 0px, rgb(26, 23, 30) 0px 1px, rgb(26, 23, 30) 1px 0px, rgb(26, 23, 30) 0px -1px;
+         
+         .outerJoin{
+          color:rgb(210, 223, 239);
+          text-shadow: rgb(26, 23, 30) -1px 0px, rgb(26, 23, 30) 0px 1px, rgb(26, 23, 30) 1px 0px, rgb(26, 23, 30) 0px -1px;
+        }
+        
+        .outerJoin:hover{
+          text-decoration:underline;
+        }
+      }
+
+      .login-footer{
+        position: absolute;
+        bottom: 0%;
+        left: 40%;
+        text-shadow: rgb(210, 210, 214) -1px 0px, rgb(210, 210, 214) 0px 1px, rgb(210, 210, 214) 1px 0px, rgb(210, 210, 214) 0px -1px;
+        color:rgb(122, 125, 134);
+        width: 400px;
+        height: 100px;
+      }
+  
+      .login-footer a{
+        width: 143px;
+        margin-left: 143px;
+        text-shadow: rgb(210, 210, 214) -1px 0px, rgb(210, 210, 214) 0px 1px, rgb(210, 210, 214) 1px 0px, rgb(210, 210, 214) 0px -1px;
+        color:rgb(122, 125, 134);
+      }
+
+      :global(.ant-input-affix-wrapper > input.ant-input){
+        background-color: #e6f6ff;
+      }
+
+
+      /**滑块**/
+      .loginSlider {
+        margin: 0 auto;
+        width: 88%;
+        height: 40px;
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.3);
+        border: 1px solid #cfcfcf;
+        border-radius: 4px;
+      }
+
+      .sliderLabelTip {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color: #787878;
+        font-size: 13px;
+        line-height: 40px;
+        position: absolute;
+        z-index: 2;
+        border-radius: 4px;
+        pointer-events:none;
+        user-select:none;
+        background: -webkit-gradient(linear, left top, right top, color-stop(0, #4d4d4d), color-stop(.4, #4d4d4d), color-stop(.5, #fff), color-stop(.6, #4d4d4d), color-stop(1, #4d4d4d));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-animation: slidetounlock 3s infinite;
+        -webkit-text-size-adjust: none 
+      }
+      .sliderLabel {
+        position: absolute;
+        top: 0;
+        width: 40px;
+        height: 38px;
+        border-top: none;
+        border-bottom: none;
+        border-left: none;
+        border-right: 1px solid #cfcfcf;
+        background: #fff url('../../static/image/codee.png') no-repeat center;
+        z-index: 3;
+        cursor: pointer;
+      }
+      .sliderSuccess {
+        position: absolute;
+        top: 0;
+        width: 40px;
+        height: 38px;
+        border-top: none;
+        border-bottom: none;
+        border-left: 1px solid #cfcfcf;
+        border-right: none;
+        background: #fff url('../../static/image/codes.png') no-repeat center;
+        z-index: 3;
+        cursor: pointer;
+      }
+
+      .sliderBg {
+        position: absolute;
+        height: 100%;
+        background: rgba(255,255,255,.5);
+        z-index:1
+      }
+
+      @-webkit-keyframes slidetounlock {
+        0% {
+          background-position: -113px 0
+        }
+        to {
+          background-position: 113px 0
+        }
+      }
+  }

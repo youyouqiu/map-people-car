@@ -1,0 +1,466 @@
+{
+    "code": 200,
+    "msg": "success",
+    "data": {
+        "menu": [
+            {
+                "name": "基础权限",
+                "code": "1_base",
+                "children": [
+                    {
+                        "name": "首页",
+                        "code": "2_home_page",
+                        "children": [
+                            {
+                                "name": "个人中心",
+                                "code": "3_personal_center"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "基础数据",
+                "code": "1_base_data",
+                "children": [
+                    {
+                        "name": "组织用户",
+                        "code": "2_org_and_user",
+                        "children": [
+                            {
+                                "name": "组织管理",
+                                "code": "3_organization_management",
+                                "children": [
+                                    {
+                                        "name": "组织列表",
+                                        "code": "4_organization_list"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "用户管理",
+                                "code": "3_user_management",
+                                "children": [
+                                    {
+                                        "name": "系统用户列表",
+                                        "code": "4_system_user_list"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "角色权限",
+                                "code": "3_role_and_permission",
+                                "children": [
+                                    {
+                                        "name": "角色列表",
+                                        "code": "4_role_list"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "企业合同",
+                        "code": "2_enterprise_contract",
+                        "children": [
+                            {
+                                "name": "企业管理",
+                                "code": "3_enterprise_management",
+                                "children": [
+                                    {
+                                        "name": "企业列表",
+                                        "code": "4_enterprise_list"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "合同标段",
+                                "code": "3_contract_section",
+                                "children": [
+                                    {
+                                        "name": "合同标段列表",
+                                        "code": "4_contract_section_list"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "系统管理",
+                        "code": "2_system",
+                        "children": [
+                            {
+                                "name": "数据字典",
+                                "code": "3_data_dictionary"
+                            },
+                            {
+                                "name": "操作日志",
+                                "code": "3_system_operation_log",
+                                "children": [
+                                    {
+                                        "name": "日志列表",
+                                        "code": "4_system_operation_log_list"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "企业管理",
+                "code": "1_enterprise_management",
+                "children": [
+                    {
+                        "name": "企业用户",
+                        "code": "2_enterprise_user",
+                        "children": [
+                            {
+                                "name": "用户管理",
+                                "code": "3_enterprise_user_management",
+                                "children": [
+                                    {
+                                        "name": "企业用户列表",
+                                        "code": "4_enterprise_user_list"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "角色权限",
+                                "code": "3_enterprise_role_and_permission",
+                                "children": [
+                                    {
+                                        "name": "企业角色列表",
+                                        "code": "4_enterprise_role_list"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "监控对象",
+                        "code": "2_monitoring_object",
+                        "children": [
+                            {
+                                "name": "车辆管理",
+                                "code": "3_vehicle_management",
+                                "children": [
+                                    {
+                                        "name": "车辆列表",
+                                        "code": "4_vehicle_list"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "人员管理",
+                                "code": "3_people_management",
+                                "children": [
+                                    {
+                                        "name": "人员列表",
+                                        "code": "4_people_list"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "设施管理",
+                                "code": "3_facility_management",
+                                "children": [
+                                    {
+                                        "name": "设施列表",
+                                        "code": "4_facility_list"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "作业管理",
+                "code": "1_work_management",
+                "children": [
+                    {
+                        "name": "作业对象",
+                        "code": "2_work_object",
+                        "children": [
+                            {
+                                "name": "作业线路",
+                                "code": "3_working_road",
+                                "children": [
+                                    {
+                                        "name": "线路列表",
+                                        "code": "4_road_list"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "作业区域",
+                                "code": "3_working_area",
+                                "children": [
+                                    {
+                                        "name": "区域列表",
+                                        "code": "4_working_area_list"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "清运区域",
+                                "code": "3_clearance_area",
+                                "children": [
+                                    {
+                                        "name": "区域列表",
+                                        "code": "4_clearance_area_list"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "作业管理",
+                        "code": "2_work_management",
+                        "children": [
+                            {
+                                "name": "作业设置",
+                                "code": "3_working_settings",
+                                "children": [
+                                    {
+                                        "name": "作业班次",
+                                        "code": "4_work_shift"
+                                    },
+                                    {
+                                        "name": "作业模式",
+                                        "code": "4_work_mode"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "作业排班",
+                                "code": "3_work_scheduling",
+                                "children": [
+                                    {
+                                        "name": "排班列表",
+                                        "code": "4_scheduling_list"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "排班调整",
+                                "code": "3_scheduling_adjustment",
+                                "children": [
+                                    {
+                                        "name": "排班日历",
+                                        "code": "4_scheduling_calendar"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "审核管理",
+                        "code": "2_audits_management",
+                        "children": [
+                            {
+                                "name": "作业审核",
+                                "code": "3_work_review",
+                                "children": [
+                                    {
+                                        "name": "作业对象列表",
+                                        "code": "4_work_object_list"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "监控中心",
+                "code": "1_monitoring_center",
+                "children": [
+                    {
+                        "name": "监控管理",
+                        "code": "2_monitoring_management",
+                        "children": [
+                            {
+                                "name": "作业监控",
+                                "code": "3_work_monitoring",
+                                "children": [
+                                    {
+                                        "name": "作业监控",
+                                        "code": "4_work_monitoring"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "作业回放",
+                                "code": "3_work_playback",
+                                "children": [
+                                    {
+                                        "name": "轨迹回放",
+                                        "code": "4_track_playback"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "permission": {
+            "": [],
+            "4_contract_section_list": [
+                "修改",
+                "新增",
+                "终止",
+                "删除"
+            ],
+            "3_enterprise_user_management": [],
+            "2_work_management": [],
+            "3_system_operation_log": [],
+            "3_enterprise_management": [],
+            "4_working_area_list": [
+                "修改",
+                "新增",
+                "删除"
+            ],
+            "4_facility_list": [
+                "修改",
+                "导入",
+                "新增",
+                "导出",
+                "绑定",
+                "删除",
+                "解绑"
+            ],
+            "2_home_page": [],
+            "4_work_monitoring": [],
+            "4_road_list": [
+                "修改",
+                "新增",
+                "删除"
+            ],
+            "2_org_and_user": [],
+            "1_monitoring_center": [],
+            "4_scheduling_calendar": [
+                "排班调整"
+            ],
+            "2_work_object": [],
+            "1_base": [],
+            "3_role_and_permission": [],
+            "3_work_playback": [],
+            "4_organization_list": [
+                "修改",
+                "新增",
+                "删除"
+            ],
+            "2_monitoring_management": [],
+            "3_working_area": [],
+            "3_working_road": [],
+            "3_clearance_area": [],
+            "4_clearance_area_list": [
+                "修改",
+                "新增",
+                "删除"
+            ],
+            "3_contract_section": [],
+            "3_work_review": [],
+            "2_enterprise_contract": [],
+            "1_enterprise_management": [],
+            "3_organization_management": [],
+            "2_audits_management": [],
+            "2_monitoring_object": [],
+            "4_track_playback": [],
+            "4_role_list": [
+                "修改",
+                "新增",
+                "删除",
+                "分配用户"
+            ],
+            "4_enterprise_list": [
+                "修改",
+                "新增",
+                "删除"
+            ],
+            "4_enterprise_role_list": [
+                "修改",
+                "新增",
+                "修改;",
+                "删除",
+                "分配用户"
+            ],
+            "4_enterprise_user_list": [
+                "修改",
+                "新增",
+                "分配角色",
+                "重置密码",
+                "删除"
+            ],
+            "3_personal_center": [
+                "修改"
+            ],
+            "4_vehicle_list": [
+                "修改",
+                "导入",
+                "新增",
+                "导出",
+                "绑定",
+                "综合设置",
+                "删除",
+                "解绑"
+            ],
+            "3_work_scheduling": [],
+            "3_working_settings": [],
+            "3_data_dictionary": [],
+            "3_work_monitoring": [],
+            "1_work_management": [],
+            "4_work_shift": [
+                "修改",
+                "新增",
+                "删除"
+            ],
+            "4_scheduling_list": [
+                "修改",
+                "复制",
+                "添加",
+                "删除"
+            ],
+            "3_enterprise_role_and_permission": [],
+            "2_system": [],
+            "3_user_management": [],
+            "3_people_management": [],
+            "4_people_list": [
+                "修改",
+                "导入",
+                "新增",
+                "导出",
+                "绑定",
+                "删除",
+                "解绑"
+            ],
+            "3_vehicle_management": [],
+            "1_base_data": [],
+            "3_scheduling_adjustment": [],
+            "4_work_mode": [
+                "修改",
+                "新增",
+                "删除"
+            ],
+            "4_system_user_list": [
+                "修改",
+                "新增",
+                "分配角色",
+                "重置密码",
+                "删除"
+            ],
+            "4_work_object_list": [
+                "审核"
+            ],
+            "4_system_operation_log_list": [
+                "打印",
+                "导出"
+            ],
+            "3_facility_management": [],
+            "2_enterprise_user": []
+        }
+    }
+}

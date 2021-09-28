@@ -1,0 +1,15 @@
+{
+    "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJsaWNlbnNlIjoibWFkZSBieSB6dyIsInVzZXJfaWQiOjEsInVzZXJfbmFtZSI6ImFkbWluIiwic2NvcGUiOlsid3JpdGUiXSwib3JnYW5pemF0aW9uX2lkIjoxLCJleHAiOjE1ODU4NTE1MjUsInVzZXJJZCI6MSwidmVyc2lvbiI6OTM1NjQzNjU4LCJhdXRob3JpdGllcyI6Ii8vLy8vLy8vLy8vLy8vLy8vZz09IiwianRpIjoiNTFkNzM1ZTYtYjg3Zi00ZTExLWJlMTItNTBkMjJiMGEzMjA3IiwiY2xpZW50X2lkIjoidGVzdCIsInNvdXJjZU51bSI6MH0.C40seXtxbj4uXXDu8JSeuU9zE3J-TAn28cijl4KUBaljdR6lyY1eQpQ62L2J1jhb1zZm11dImwcYHpbwf352fYc6JES2BV8NSzmfeX-_SCgpcAbXAYKAvoA-R9PdKl9o-uGUG2fMOz4SqgVccU8G6oIm1XARSkhYYhq6LBcN9M0TgplkTvboe85V_BQf3QzHXXaoslEuXCBpzbiXYMt5l54W5Nd5ZzIAq8g3vmfw9YLPOdOqhLY7bxopmXbIYFHaoYcxifLSwO3GWfNJeLEOkuaFWGvAa8DfFGNUgFadl8SgnmZirVFbslZUj9efKvh4gggbn7_jBhAE4wchrhYaJg",
+    "token_type": "bearer",
+    "refresh_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbiIsInVzZXJJZCI6MSwidmVyc2lvbiI6OTM1NjQzNjU4LCJhdXRob3JpdGllcyI6Ii8vLy8vLy8vLy8vLy8vLy8vZz09IiwiY2xpZW50X2lkIjoidGVzdCIsInNvdXJjZU51bSI6MCwibGljZW5zZSI6Im1hZGUgYnkgenciLCJ1c2VyX2lkIjoxLCJzY29wZSI6WyJ3cml0ZSJdLCJvcmdhbml6YXRpb25faWQiOjEsImF0aSI6IjUxZDczNWU2LWI4N2YtNGUxMS1iZTEyLTUwZDIyYjBhMzIwNyIsImV4cCI6MTU4ODQwMDMyNSwianRpIjoiZGMxZThhOTEtNjA0OS00NmI5LTk1NjgtZTE4YjFhM2EwM2YzIn0.dQATFSxW3lLqgviowz1fzfkH0TW3W4XxDfDP19WkwcvTC1qVLLuSf_jCzpJ1BSKHPDGrnRpU5_52V-B4xxNCHRLZCirNG2EbmMg-QZ60EzdtZJvuwmmdK2ZKIl95sBHTbnsU4y4OvYYval5Hba97W32pL-rsPqalJaszb1wsIiNCDdv9Q8lHiGYgZ__UDn5LMjxLp8H1ShVYhhb7C9Zj8-LrpuHRdtbnOAn1O1ZEro42sb_2cJk5_mc4BzBlZS55MUKpQU4AUbGKZSOuf-sxM7PhoIOY-GUaOE9vDpEtwL4NbKCG5NDA0bT7rbZqs0RrwFUusIj215T3kGDyUvAWqQ",
+    "expires_in": 43199,
+    "scope": "write",
+    "license": "made by zw",
+    "user_id": 1,
+    "user_name": "admin",
+    "organization_id": 1,
+    "version": 935643658,
+    "authorities": "/////////////////g==",
+    "sourceNum": 0,
+    "jti": "51d735e6-b87f-4e11-be12-50d22b0a3207"
+}

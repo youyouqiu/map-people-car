@@ -1,0 +1,131 @@
+// pointer-events: none;
+.left{
+    position: absolute;
+    top: 110px;
+    left: 30px;
+}
+.right{
+    position: absolute;
+    right: 30px;
+    top: 120px;
+}
+.title{
+    text-indent: 22px;
+    font-size: 19px;
+    .title_img{
+        width: 16px;
+        height: 18px;
+        position: relative;
+        left: -7px;
+        top: -1px;
+    }
+}
+.lable{
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    justify-content: center;
+    color: #fff;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 15px;
+    div{
+        margin-right: 25px;
+        .icon{
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-radius: 100px;
+            position: relative;
+            box-shadow: 0 0 4px 2px #fff;
+            margin-right: 13px;
+            top: 2px;
+        }
+        .icon1{
+            background: #9407a2;
+        }
+        .icon2{
+            background: #ffa51e;
+        }
+        .icon3{
+            background: #a7a7a7;
+        }
+    }
+}
+.clock{
+    position: absolute;
+    top: 70px;
+    color: #fff;
+    left: 0;
+    text-align: center;
+    right: 0;
+    font-size: 66px;
+    margin: auto;
+    span{
+        border: 1px solid #0058ad;
+        border-radius: 6px;
+        padding: 0 6px;
+        background: #0a18488c;
+        margin: 4px;
+    }
+    .colon{
+        border: none;
+        background: none;
+        margin: 0;
+    }
+}
+.box{
+    font-weight: bold;
+    padding: 8px;
+    font-size: 15px;
+    background: #1f3a5687;
+    width: 300px;
+    color: #fff;
+    border-radius: 4px;
+}
+.card1{
+    .value{
+        text-align: right;
+        color: #1091ff;
+        margin-right: 12px;
+        font-size: 24px;
+        transition: all ease 0.3s;
+        background: transparent;
+        &:hover{
+            background: linear-gradient(45deg, #1959e273, transparent);
+        }
+    }
+}
+.card2Wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card2{
+    background: #142449;
+    padding: 10px;
+    font-size: 16px;
+    color: #1d90f7;
+    width: calc(50% - 10px);
+    margin: 5px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.tips{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  top: 3px;
+  span {
+    color: #000;
+    font-size: 15px;
+    font-weight: bold;
+    position: absolute;
+    top:3px;
+    left:2px
+  }
+}

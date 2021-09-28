@@ -1,0 +1,230 @@
+.concrete-table {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .concrete-table-queyr {
+        padding: 10px;
+        // border: 1px solid #f0f0f0;
+        min-height: 54px;
+    }
+    
+    .concrete-table-body {
+        display: flex;
+        height: 0;
+        flex-grow: 1;
+        >div {
+            height: 100%;
+        }
+
+        .concrete-table-tree {
+            border-right: 1px solid #f0f0f0;
+            transition: all .1s;
+            position: relative;
+            padding-top: 9px;
+            > div:first-child {
+                min-width: 0;
+                // padding-left: 32px;
+            }
+            .tree-btn {
+                position: absolute;
+                padding: 4px;
+                transition: all .3s;
+                left: 7px;
+                top: 14px;
+            }
+        }
+
+        .tree-show {
+            width: 260px;
+            padding-left: 32px;
+            .tree-btn {
+                transform:rotate(0deg)
+            }
+        }
+
+        .tree-hide {
+            width: 0;
+            .tree-btn {
+                transform:rotate(-180deg)
+            }
+        }
+
+        .concrete-table-body-right {
+            display: flex;
+            flex-direction: column;
+            width: 0;
+            flex-grow: 1;
+            .sectionDetail{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                margin: 0 0 0 30px;
+                border:1px solid #eee;
+                height: 152px;
+                overflow: auto;
+                .sectionItem{
+                    padding: 15px 105px;  
+                    width: 150px;
+                    span{
+                        display: block;
+                        white-space: nowrap;
+                    }
+                    .sectionTitle{
+                        font-weight: 600;
+                        font-size: 15px;
+                    }
+                }
+            }
+            .concrete-table-setting {
+                display: flex;   
+                justify-content: space-between;
+                padding: 10px 15px 10px 40px;
+                height: 52px;
+                .concrete-table-setting-btns {
+                    >Button:not(:last-child)  {
+                        margin-right: 10px;
+                    }
+                }
+                .concrete-table-setting-right-input {
+                    position: relative;
+                    padding-right: 26px;
+                    &::after {
+                        position: absolute;
+                        content: ' ';
+                        height: 80%;
+                        width: 1px;
+                        top: 10%;
+                        right: 5px;
+                        background-color: #f1f1f1;
+                    }
+                }
+                .concrete-table-setting-right {
+                    >span:not(:first-child) {
+                        margin-left: 12px;
+                    }
+                }
+            }
+            .concrete-table-content {
+                height: 0;
+                display: flex;
+                flex-grow: 1;
+                tr > th, & tr > td {
+                    white-space: nowrap;
+                    cursor: default;
+                }
+                tr > th div{
+                    padding: 0;
+                }
+                
+                :global(.ant-table-row).hover, :global(.ant-table-row):hover, :global(.ant-table-row-hover){
+                    td {
+                        background-color: #edf6ff !important;
+                    }
+                }
+                
+                tr:global(.ant-table-row-selected) > td {
+                    background-color: #dceffe !important;
+                }
+                :global(.ant-table-row):nth-child(odd) > td {
+                    background-color: #fbfbfb ;
+                }
+                // tr > td {
+                //     text-overflow: ellipsis;
+                //     overflow: hidden;
+                //     word-break: break-all;
+                // }
+                >div {
+                    width: 100%;
+                }
+                ul {
+                    margin: 6px 0;
+                }  
+
+                
+            }
+        }
+    }
+}
+
+.concrete-popconfirm {
+    label {
+        width: 100%;
+        margin: 0;
+    }
+
+    .setting-columns {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+      
+      .setting {
+        position: relative;
+      }
+      
+      .setting-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #eee;
+        padding: 0 10px 7px 10px;
+        font-size: 14px;
+        width: 100%;
+      }
+      
+      .setting-content {
+        display: flex;
+        align-items: center;
+      }
+      .setting-checkbox {
+        width: 170px;
+        max-height: 300px;
+        overflow: scroll;
+        border: 1px solid #eee;
+        margin: 10px 10px 0;
+        padding: 10px;
+      }
+      
+      .icon-wrap {
+        width: 30px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #eee;
+        cursor: pointer;
+      }
+      .icon {
+        font-size: 18px;
+      }
+      
+      .setting-foot {
+        padding: 10px;
+        width: 100%;
+      }
+}
+
+.table-filter {
+    .table-filter-body {
+        padding: 10px;
+        max-height: 200px;
+        overflow: auto;
+        label:not(:last-child) {
+            margin-bottom: 4px;
+        }
+    }
+    .table-filter-btns {
+        display: flex;
+        padding: 8px;
+        border-top: 1px solid #f0f0f0;
+        justify-content: space-between;
+    }
+}
+
+.textOmit{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width:150px;
+}

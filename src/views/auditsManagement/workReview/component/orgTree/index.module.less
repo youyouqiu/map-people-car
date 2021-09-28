@@ -1,0 +1,72 @@
+.treeWrapper{
+    position: relative;
+    min-width: 22px;
+    height: 97%;
+    overflow: hidden;
+    .leftArrow{
+        position: absolute;
+        width: 22px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        padding-top: 4px;
+        background-color: #fff;
+        .arrow{
+            font-size: 22px;
+            transition: all .3s ease-in-out;
+            &.arrowRotate{
+              transform: rotateY(180deg);
+            }
+        }
+    }
+    .treeContainer{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        margin-right: 5px;
+        padding: 2px 12px 6px 0;
+        box-sizing: border-box;
+        transition: all .3s ease-in-out;
+        .search-input{
+            padding-right: 6px;
+        }
+        .treeBox{
+            flex: 1;
+            width: 100%;
+            white-space: nowrap;
+            margin-top: 10px;
+            overflow: auto;
+        }
+        .orgIcon{
+            width: 14px;
+            height: 14px;
+            vertical-align: -1px;
+        }
+        .openOrgIcon{
+            width: 16px;
+            height: 16px;
+            vertical-align: -2px;
+        }
+        .noTreeData{
+            margin-top: 15px;
+            color: #999;
+        }
+    }
+    .treeNoData{
+        padding: 20px;
+        text-align: center;
+    }
+    :global(.ant-tree-node-content-wrapper) {
+        border: 1px solid transparent;
+    }
+    :global(.ant-tree-node-content-wrapper.ant-tree-node-selected) {
+        border: 1px solid #FFB951;
+        background-color: #fff8b0 !important;
+    }
+
+    :global(.ant-tree .ant-tree-switcher){
+      width:5px;
+    }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <link />
+  <link rel="stylesheet/less" type="text/css" href="/theme.less" />
+  <script type="text/javascript" src="//api.map.baidu.com/api?type=webgl&v=3.0&ak=BOUTxUmuP8RMGbHvYuubgGTwWYHmNyFv"></script>
+  <!-- <title>F3环卫云平台</title> -->
+</head>
+
+<body>
+  <div id="topest-container" class="topest-container"></div>
+
+  <!-- Main -->
+</body>
+
+<script>
+  const link = document.getElementsByTagName("link")[0];
+  const configInfo = JSON.parse(window.sessionStorage.getItem('personalizedConfig'));
+  let icoSrc;
+  if (configInfo) {
+    icoSrc = configInfo.platformIco ? configInfo.platformIco : ''
+  } else {
+    icoSrc = ''
+  }
+  link.setAttribute('href', icoSrc);
+</script>
+
+</html>

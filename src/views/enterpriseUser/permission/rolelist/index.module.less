@@ -1,0 +1,123 @@
+/********************************清除原有样式****************************/
+:global .ant-tabs-tabpane{
+  outline: none!important;
+}
+/************************************************************/
+.border {
+  border: 1px solid #d9d9d9;
+}
+.position(@t, @x, @y) {
+  position: @t;
+  top: @y;
+  left: @x;
+}
+.flex(@x, @y) {
+  display: flex;
+  align-items: @x;
+  justify-content: @y;
+}
+
+.role-permission-container{
+  // padding: 0 16px 16px;
+  a.disabled{
+    cursor: not-allowed;
+    color: #999;
+  }
+  // .border();
+  .data-action{
+    position: relative;
+    .action-form{
+      justify-content: flex-end;
+      button{
+        color: #333;
+      }
+    }
+    .hide-handle{
+      display: none;
+    }
+    .batch-handle-info{
+      display: inline;
+    }
+    .column-setting-div{
+      .position(absolute, auto, 40px);
+      right: 20px;
+      width: 240px;
+      height: 330px;
+      overflow-x: hidden;
+      .border();
+      background-color: #fff;
+      z-index: 9;
+      .checks{
+        margin-top: 5px;
+        margin-right: 5px;
+        float: left;
+      }
+      .column-setting-title{
+        .flex(center, space-between);
+        border-bottom: 1px solid #d9d9d9;
+        padding-left: 10px;
+      }
+      .column-setting-list{
+        height: calc(100% - 93px);
+        margin: 12px 50px 0px 12px;
+        padding: 10px;
+        overflow: auto;
+        .border();
+      }
+      .column-setting-sort{
+        .position(absolute, auto, 76px);
+        right: 6px;
+        bottom: 76px;
+        .flex(center, space-between);
+        flex-direction: column;
+        button{
+          flex: 1;
+          width: 28px;
+          background-color: #eee;
+          color: #666;
+          margin: 5px;
+        }
+      }
+      .column-setting-bottom{
+        padding: 12px;
+      }
+    }
+  }
+}
+
+.permission-tree{
+  height: calc(100vh - 410px);
+  min-height: 300px;
+  overflow: auto;
+  border: 1px solid #eee;
+  border-top: 0;
+}
+
+
+.tableBtns{
+  button{
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+  }
+}
+
+.tab-title{
+  border: 1px solid #eee;
+  border-top: 0;
+  background: #f5f5f5; 
+  font-size: 15px;
+  text-align: center;
+  height: 35px;
+  line-height: 34px; 
+}
+
+.title{
+  border: 1px solid #eee;
+  border-bottom: 0;
+  background: #f5f5f5; 
+  font-size: 15px;
+  text-align: center;
+  height: 35px;
+  line-height: 34px; 
+}

@@ -1,0 +1,51 @@
+.treeWrapper{
+    position: relative;
+    min-width: 22px;
+    height: 100%;
+    overflow: hidden;
+    .leftArrow{
+        position: absolute;
+        width: 22px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        padding-top: 4px;
+        background-color: #fff;
+        .arrow{
+            font-size: 22px;
+            transition: all .3s ease-in-out;
+            &.arrowRotate{
+              transform: rotateY(180deg);
+            }
+        }
+    }
+    .treeContainer{
+        display: flex;
+        flex-direction: column;
+        width: 260px;
+        height: 100%;
+        margin-right: 5px;
+        padding: 2px 12px 6px 30px;
+        box-sizing: border-box;
+        border-right: 1px solid #ccc;
+        transition: all .3s ease-in-out;
+        // &.treehide{
+        //   margin:0 20px 0 -260px;
+        // }
+        .treeBox{
+            flex: 1;
+            width: 100%;
+            white-space: nowrap;
+            margin-top: 10px;
+            overflow: auto;
+        }
+    }
+}
+
+.selectClass{
+    width: 265px;
+    position: 'relative';
+    left: -100; 
+    top: 40;
+}

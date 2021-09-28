@@ -1,0 +1,635 @@
+@import '../../framework/skin/index.less';
+
+// .with-skins({
+  :global(input[readonly]){
+    cursor: not-allowed;
+  }
+  .disabledBtn{
+    color:  rgba(0, 0, 0, 0.25);
+    cursor: not-allowed;
+  }
+  .managerPanel{
+    :global(.ant-tabs-top-bar){
+      padding: 0 20px;
+      background-color:#fff;
+    }
+    :global(.ant-tabs-content,.ant-tabs-vertical){
+      overflow: visible;
+    }
+    :global(.ant-badge-status-text){
+      vertical-align: -1px;
+    }
+    :global .handleBtns{
+      button{
+        height: 20px;
+        margin: 0 5px;
+        padding: 0;
+      }
+    }
+    .noPadding{
+        padding: 0;
+    }
+    .batchHandle{
+        padding: 0 15px;
+    }
+    .pannelContainer{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    :global(.ant-tabs-top-bar){
+      position: relative;
+      margin-bottom: 0;
+      z-index: 10;
+      background-color:rgb(251,251,251);
+    }
+    // 车辆管理
+    .vehiclePanel,.peoplePanel{
+      padding: 15px;
+      .bindSwitch{
+        position: absolute;
+        top: -48px;
+        right: -5px;
+        z-index: 11;
+        display: flex;
+        align-items: center;
+        button{
+          margin-left: 10px;
+        }
+      }
+      #bindWrapper{
+        overflow: hidden;
+      }
+      .bindBox{
+        margin:0 0 12px;
+        padding: 15px 0 0;
+        transition: all .3s ease-in-out;
+        border: 1px solid #ececec;
+        :global(.ant-tabs-left-content){
+          border-left: none;
+        }
+        :global(.ant-form-item){
+          :global(.ant-form-item){
+            margin-bottom: 0;
+          }
+        }
+        :global(.ant-select-selector){
+          flex-wrap: nowrap;
+        }
+        :global(.ant-form-item-explain){
+          line-height: 18px;
+        }
+        // div{
+        //   overflow: visible;
+        // }
+        .bindOptoion{
+          background-color: #ecf9ff;
+        }
+        .noBindOptoion{
+          background-color: #fffcda;
+        }
+        :global(.ant-select-item-option-active:not(.ant-select-item-option-disabled)) {
+          background-color: #f5f5f5;
+        }
+        :global(.ant-select-item-option-selected:not(.ant-select-item-option-disabled)){
+          background-color: #d6f3ff;
+        }
+      }
+      .bindFold{
+        margin-top: -190px;
+        margin-bottom: 50px;
+      }
+      .contentWrapper{
+        // display: flex;
+        // flex: 1;
+        height: 100%;
+        .tableContainer{
+          flex:1;
+          height: 100%;
+          .handleContainer{
+            display: flex;
+            padding:0 0 12px;
+            align-items: center;
+            justify-content: space-between;
+            .addBtn{
+              margin: 0 15px;
+            }
+            .rightHandle{
+              .refresh{
+                margin: 0 10px 0;
+              }
+            }
+          }
+          :global(.ant-table-column-sorters){
+            justify-content: center;
+          }
+        }
+      }
+      // &.vehicleFoldPanel{
+      //   .contentWrapper{
+      //     height: calc(100vh - 208px);
+      //   }
+      // }
+    }
+  }
+  .editForm{
+    position: relative;
+    height: 100%;
+    // height: calc(100% - 100px);
+    // overflow-y: auto;
+  }
+  .spinning{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255,.6);
+    &.loading{
+      padding-top: 30%;
+      justify-content: flex-start;
+    }
+  }
+  // 详情
+  .settingBox{
+      margin: 10px 0;
+      >span{
+          display: inline-block;
+          padding: 5px;
+          color: #bbbbbb;
+          border-right: 1px solid #ccc;
+      }
+      button{
+          margin-left: 10px;
+      }
+  }
+  .monitorName{
+    //   font-size: 16px;
+    //   font-weight: bold;
+  }
+  .monitorInfo{
+      margin-bottom: 30px;
+      color: #888;
+      div{
+          margin: 20px 0;
+      }
+      p{
+          margin: 0;
+      }
+  }
+  .detailContainer{
+    display: flex;
+    height: 100%;
+    :global(.ant-tabs-nav-wrap){
+      padding-left: 20px;
+    }
+  }
+  .vehicleImgBox{
+      padding: 11px;
+      &.autoBox{
+          height: 190px;
+          overflow-y: auto;
+      }
+  }
+  .detail-wrapper{
+    flex: 1;
+    width: 1060px;
+    .detailRemark{
+        padding:6px 11px;
+    }
+    .detail-tabs{
+      height: 100%;
+      :global(.ant-tabs-content){
+        height: 100%;
+      }
+      .detailPanel{
+        display: flex;
+        height: 100%;
+        padding: 10px;
+        overflow-y: auto;
+        flex-direction: column;
+        :global(.ant-input-affix-wrapper){
+            border: none;
+            outline: none;
+            box-shadow: none;
+          }
+          input[readonly] {
+            cursor: default;
+          }
+      }
+      .detailTopBox{
+        padding-top: 20px;
+        border-bottom: 1px solid #f0f0f0;
+        .detail-info-text{
+          margin-bottom: 0!important;
+        }
+      }
+      .detail-info-row{
+        padding-left: 20px;
+        .detail-info-title{
+          display: block;
+          height: 30px;
+          line-height: 22px;
+          font-size: 20px;
+          font-weight: 800;
+        }
+        .detail-title-text{
+          display: block;
+          height: 30px;
+          line-height: 30px;
+          font-size: 14px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+        .detail-info-head{
+          display: block;
+          height: 30px;
+          font-size: 15px;
+          font-weight: 600;
+        }
+        .detail-info-text{
+          display: block;
+          min-height: 40px;
+          margin-bottom: 14px;
+          font-size: 14px;
+        }
+      }
+      .imgItem{
+        color: #888;
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+        border-radius: 4px;
+        box-shadow: 1px 1px 3px #f0f0f0;
+        border: 1px solid #f0f0f0;
+        div{
+          margin-bottom: 2px;
+          padding: 0 10px;
+        }
+        .imgBox{
+          height: 150px;
+          line-height: 150px;
+          padding: 5px;
+          text-align: center;
+          background-color: #eee;
+          img{
+            max-width: 100%;
+            max-height: 100%;
+          }
+        }
+        .imgName{
+          text-align: center;
+        }
+        .uploadTime,.uploadPeople{
+          font-size: 13px;
+        }
+      }
+      .innerBox{
+        flex:1;
+        padding-bottom: 15px;
+        padding: 0 15px 15px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        &.detailInnerBox{
+            height: calc(100vh - 235px);
+            flex: auto;
+        }
+        .infoHeader{
+          margin: 15px 0;
+          padding: 2px 0;
+          text-align: center;
+          border: 1px solid #f0f0f0;
+          background-color: #eee;
+        }
+        .licensePhoto,.transportPhoto{
+          height: 200px;
+          margin-bottom: 15px;
+          padding: 10px;
+          background-color: #eee;
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .transportPhoto{
+          height: 100px;
+        }
+      }
+    }
+    .detail-user-name{
+      color: #555;
+      font-size: 16px;
+    }
+    .detail-group-name{
+      color: #8c8c8c;
+      font-size: 12px;
+    }
+    .drawer-footerBtns{
+      margin-left: -20px;
+      padding: 10px 20px;
+      background: #eee;
+    }
+  }
+  .detail-right-box{
+    width: 200px;
+    padding: 0 20px 20px;
+    position: absolute;
+    top: 55px;
+    right:0;
+    bottom: 0;
+    left: auto;
+    border-top: 1px solid #e9e9e9;
+    padding: 10px 16px;
+    background: #eee;
+    .panel-title{
+      padding: 8px 16px;
+      margin: 0 0 20px;
+      font-size: 15px;
+      color: rgba(0, 0, 0, 0.65);
+      border-bottom: 1px solid #e5e5e5;
+    }
+    button{
+      margin-top: 20px;
+      width: 100%;
+    }
+  }
+
+  // 新增、修改抽屉
+  .publicDrawer{
+    width: 1000px;
+    .infoHeader{
+      margin: 0 0 15px;
+      padding: 2px 0;
+      text-align: center;
+      border: 1px solid #f0f0f0;
+      background-color: #eee;
+    }
+    .groupContainer{
+      height: 470px;
+      overflow-y: auto;
+      .groupItem{
+        display: flex;
+        align-items: center;
+        >div{
+          flex:1
+        }
+        >span{
+          width: 35px;
+          margin-top: 14px;
+          cursor: pointer;
+          color: #40a9ff;
+          font-size: 18px;
+        }
+        .deleteGroup{
+          color: #ff4d4f;
+        }
+      }
+    }
+    .vehicleImgItem{
+      margin-bottom: 25px;
+      .imgBox{
+        height: 80px;
+        line-height: 44px;
+        padding: 15px;
+        text-align: center;
+        border: 1px solid #f0f0f0;
+        img{
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+      .deleteImgBtn{
+          margin-top: 15px;
+      }
+    }
+    .imgUser,.imgName{
+        margin: 6px 0 15px;
+    }
+    .imgUser,.imgTime{
+      color: #888;
+      font-size: 12px;
+    }
+    .imgTime{
+      line-height: 32px;
+    }
+    .otherImg{
+      .imgBox{
+        height: 75px;
+        line-height: 65px;
+        padding: 5px;
+        text-align: center;
+        border: 1px solid #d9d9d9;
+        background-color: #eee;
+        img{
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+      .otherImgCol{
+        margin-bottom: 15px;
+      }
+    }
+    .uploadBox{
+      // text-align: right;
+    }
+  }
+  .defaultSelect{
+    :global(.ant-select-selector){
+      padding: 0!important;
+    }
+    :global(.ant-select-selection-item){
+      color: #666;
+    }
+    :global(.ant-select-arrow){
+      display: none;
+    }
+    *{
+      cursor: text!important;
+    }
+  }
+
+  // 人员管理
+  .itemTable{
+    width: 100%;
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+    .peopleImgBox{
+        // background: #f3f3f3;
+        // text-align: center;
+        .peopleImg{
+            display: block;
+            margin: 0 10px;
+            width: 180px;
+            height: auto;
+            max-height: 400px;
+            background-color: #f3f3f3;
+        }
+        :global(.ant-upload-list-picture-card-container),:global(.ant-upload-select-picture-card){
+            margin-left: 37px;
+        }
+    }
+    th{
+      padding: 0 5px;
+      text-align: center;
+      border: 1px solid #f0f0f0;
+      background-color: #fafafa;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      &.setName{
+          width: 100px;
+      }
+      .redIcon{
+        margin-right: 2px;
+        vertical-align: -2px;
+        color: #ff4d4f;
+      }
+      &.tableHeader{
+        position: relative;
+        height: 35px;
+        font-size: 15px;
+        .refreshIcon{
+            position: absolute;
+            top: 10px;
+            right: 16px;
+            cursor: pointer;
+            &:hover{
+                color: #40a9ff;
+            }
+        }
+      }
+    }
+    .trNo{
+        position: relative;
+        width: 100px;
+        text-align: center;
+        .deleteSensor{
+            position:absolute;
+            left: 12px;
+            top: 10px;
+            font-size: 12px;
+            cursor: pointer;
+            &:hover{
+                color: #ff4d4f;
+            }
+        }
+    }
+    td{
+        min-width: 60px;
+        padding: 1px;
+        color: #888;
+        word-break: break-all;
+        border: 1px solid #f0f0f0;
+        :global(.ant-form-item){
+          margin-bottom: 0;
+        }
+        :global(.ant-input-affix-wrapper){
+          border: none;
+          border-radius: 0;
+        }
+        :global(.ant-form-item-explain){
+          padding-left: 11px;
+        }
+        :global(.ant-form-item-control-input-content){
+            overflow: hidden;
+        }
+        :global(.ant-radio-group){
+          padding: 0 11px;
+        }
+        &.tdNoInfo{
+            padding: 10px;
+        }
+    }
+  }
+  .detailTable{
+      margin: -2px!important;
+  }
+
+  // 导入弹窗
+  .importMsg{
+    margin-top: 6px;
+  }
+  .downLink{
+    height: 20px;
+    padding: 0 3px 0 0;
+  }
+  .importRow{
+    margin-bottom: 20px;
+  }
+  
+  // 参数设置
+  .paramBtnGroup{
+      margin-bottom: 10px;
+      button{
+          margin-right: 15px;
+      }
+  }
+
+  .switchType{
+      width: 220px;
+  }
+  .onStatus,.offStatus{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+    border-radius: 100%;
+    vertical-align: -2px;
+    border: 4px solid  #bbb;
+    background-color: #fff;
+  }
+  .onStatus{
+      border-color: rgb(107,197,223);
+  }
+
+  /** 
+  * 设施管理
+  */
+  .mapContainer{
+      height: 242px;
+  }
+  .imgTable{
+    :global(.ant-input-affix-wrapper){
+        border: 1px solid #f0f0f0!important;
+      }
+  }
+
+// }
+.formItemCol{
+   margin-bottom: 0;
+}
+
+.hasRedIcon::before {
+    display: inline-block;
+    margin-right: 4px;
+    color: #ff4d4f;
+    font-size: 14px;
+    font-family: SimSun, sans-serif;
+    line-height: 1;
+    content: '*';
+}
+
+.channelBox{
+  padding-top: 15px;
+  :global(.ant-form-item-label){
+    width: 160px;
+    justify-content: flex-end;
+  }
+}
+.videoRow{
+  :global(.ant-form-item-has-error){
+    border: none!important;
+    :global(.ant-select-selector){
+      border:1px solid #ff4d4f!important;
+    }
+  }
+}
+div.tdNoInfo{
+  display: inline-block;
+  margin-left: 10px;
+}

@@ -1,0 +1,762 @@
+{
+    "code": 200,
+    "msg": "success",
+    "data": {
+        "menu": [
+            {
+                "name": "基础权限",
+                "code": "1_base",
+                "children": [
+                    {
+                        "name": "首页",
+                        "code": "2_home_page",
+                        "children": [
+                            {
+                                "name": "工作台",
+                                "code": "3_workbench",
+                                "children": [
+                                    {
+                                        "name": "待办",
+                                        "code": "4_to_do_list"
+                                    },
+                                    {
+                                        "name": "公告",
+                                        "code": "4_announcement"
+                                    },
+                                    {
+                                        "name": "报警",
+                                        "code": "4_alarm"
+                                    },
+                                    {
+                                        "name": "通知",
+                                        "code": "4_notification"
+                                    },
+                                    {
+                                        "name": "消息",
+                                        "code": "4_message"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "个人中心",
+                                "code": "3_personal_center"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "平台管理",
+                "code": "1_platform_management",
+                "children": [
+                    {
+                        "name": "组织用户",
+                        "code": "2_org_and_user",
+                        "children": [
+                            {
+                                "name": "组织管理",
+                                "code": "3_organization_management",
+                                "children": [
+                                    {
+                                        "name": "组织列表",
+                                        "code": "4_organization_list"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "分组管理",
+                                "code": "3_group_management",
+                                "children": [
+                                    {
+                                        "name": "监控分组列表",
+                                        "code": "4_monitoring_group_list"
+                                    },
+                                    {
+                                        "name": "对讲群组列表",
+                                        "code": "4_intercom_group_list"
+                                    },
+                                    {
+                                        "name": "讨论组列表",
+                                        "code": "4_discussion_group"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "用户管理",
+                                "code": "3_user_management",
+                                "children": [
+                                    {
+                                        "name": "系统用户列表",
+                                        "code": "4_system_user_list"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "监控对象",
+                        "code": "2_monitoring_object",
+                        "children": [
+                            {
+                                "name": "车辆管理",
+                                "code": "3_vehicle_management",
+                                "children": [
+                                    {
+                                        "name": "车辆列表",
+                                        "code": "4_vehicle_list"
+                                    },
+                                    {
+                                        "name": "转发设置",
+                                        "code": "4_forward_configuration"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "人员管理",
+                                "code": "3_people_management",
+                                "children": [
+                                    {
+                                        "name": "人员列表",
+                                        "code": "4_people_list"
+                                    },
+                                    {
+                                        "name": "对讲设置",
+                                        "code": "4_intercom_configuration"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "系统管理",
+                        "code": "2_system",
+                        "children": [
+                            {
+                                "name": "个性设置",
+                                "code": "3_personalise",
+                                "children": [
+                                    {
+                                        "name": "平台个性设置",
+                                        "code": "4_platform_personalise"
+                                    },
+                                    {
+                                        "name": "对象图标设置",
+                                        "code": "4_icon_personalise"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "数据字典",
+                                "code": "3_data_dictionary"
+                            },
+                            {
+                                "name": "角色权限",
+                                "code": "3_role_and_permission",
+                                "children": [
+                                    {
+                                        "name": "角色列表",
+                                        "code": "4_role_list"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "消息管理",
+                                "code": "3_message_management",
+                                "children": [
+                                    {
+                                        "name": "公告管理",
+                                        "code": "4_announcement_management"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "硬件管理",
+                "code": "1_hardware_management",
+                "children": [
+                    {
+                        "name": "终端管理",
+                        "code": "2_terminal_management",
+                        "children": [
+                            {
+                                "name": "终端列表",
+                                "code": "3_terminal_list",
+                                "children": [
+                                    {
+                                        "name": "终端列表",
+                                        "code": "4_terminal_list"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "属性管理",
+                                "code": "3_terminal_property_management"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "SIM卡管理",
+                        "code": "2_sim_card_management",
+                        "children": [
+                            {
+                                "name": "SIM卡列表",
+                                "code": "3_sim_card_list",
+                                "children": [
+                                    {
+                                        "name": "SIM卡列表",
+                                        "code": "4_sim_card_list"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "属性管理",
+                                "code": "3_sim_card_property_management"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "参数设置",
+                        "code": "2_configuration_management",
+                        "children": [
+                            {
+                                "name": "指令参数",
+                                "code": "3_command_parameter_management",
+                                "children": [
+                                    {
+                                        "name": "指令参数设置列表",
+                                        "code": "4_command_parameter_list"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "视频参数",
+                                "code": "3_video_parameter_management",
+                                "children": [
+                                    {
+                                        "name": "视频参数设置列表",
+                                        "code": "4_video_parameter_list"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "报警参数",
+                                "code": "3_alarm_parameter_management",
+                                "children": [
+                                    {
+                                        "name": "平台参数列表",
+                                        "code": "4_platform_parameter_list"
+                                    },
+                                    {
+                                        "name": "硬件参数列表",
+                                        "code": "4_hardware_parameter_list"
+                                    },
+                                    {
+                                        "name": "主动安全参数列表",
+                                        "code": "4_adas_parameter_list"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "外设管理",
+                        "code": "2_peripheral_management",
+                        "children": [
+                            {
+                                "name": "外设轮询",
+                                "code": "3_peripheral_configuration",
+                                "children": [
+                                    {
+                                        "name": "外设轮询列表",
+                                        "code": "4_peripheral_polling_configuration"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "传感器设置",
+                                "code": "3_sensor_configuration"
+                            },
+                            {
+                                "name": "传感器升级",
+                                "code": "3_sensor_online_upgrade"
+                            },
+                            {
+                                "name": "OBD设置",
+                                "code": "3_obd_configuration",
+                                "children": [
+                                    {
+                                        "name": "OBD列表",
+                                        "code": "4_obd_list"
+                                    },
+                                    {
+                                        "name": "车型配置列表",
+                                        "code": "4_vehicle_model_list"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "业务管理",
+                "code": "1_business_management",
+                "children": [
+                    {
+                        "name": "计划管理",
+                        "code": "2_plan_management",
+                        "children": [
+                            {
+                                "name": "基本信息",
+                                "code": "3_basic_information",
+                                "children": [
+                                    {
+                                        "name": "厂区信息",
+                                        "code": "4_factory_list"
+                                    },
+                                    {
+                                        "name": "客户信息",
+                                        "code": "4_customer_list"
+                                    },
+                                    {
+                                        "name": "工地信息",
+                                        "code": "4_construction_site_list"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "合同管理",
+                                "code": "3_contract_management",
+                                "children": [
+                                    {
+                                        "name": "合同列表",
+                                        "code": "4_contract_list"
+                                    },
+                                    {
+                                        "name": "合同审核",
+                                        "code": "4_contract_censor"
+                                    },
+                                    {
+                                        "name": "合同信用",
+                                        "code": "4_contract_credit"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "任务管理",
+                                "code": "3_task_management",
+                                "children": [
+                                    {
+                                        "name": "任务列表",
+                                        "code": "4_task_list"
+                                    },
+                                    {
+                                        "name": "任务确认",
+                                        "code": "4_task_confirmation"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "属性管理",
+                                "code": "3_business_property_management",
+                                "children": [
+                                    {
+                                        "name": "砼强度",
+                                        "code": "4_concrete_strength"
+                                    },
+                                    {
+                                        "name": "特性",
+                                        "code": "4_feature_list"
+                                    },
+                                    {
+                                        "name": "坍落度",
+                                        "code": "4_slump"
+                                    },
+                                    {
+                                        "name": "施工部位",
+                                        "code": "4_construction_part"
+                                    },
+                                    {
+                                        "name": "计价方式",
+                                        "code": "4_valuation_method"
+                                    },
+                                    {
+                                        "name": "砂浆价格",
+                                        "code": "4_mortar_price"
+                                    },
+                                    {
+                                        "name": "浇筑方式",
+                                        "code": "4_pouring_method"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "name": "生产管理",
+                        "code": "2_production_management",
+                        "children": [
+                            {
+                                "name": "原料管理",
+                                "code": "3_material_management"
+                            },
+                            {
+                                "name": "配比管理",
+                                "code": "3_ratio_management"
+                            },
+                            {
+                                "name": "工控管理",
+                                "code": "3_industry_control"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "调度管理",
+                        "code": "2_allocation_management",
+                        "children": [
+                            {
+                                "name": "车辆排班",
+                                "code": "3_vehicle_scheduling",
+                                "children": [
+                                    {
+                                        "name": "出车单列表",
+                                        "code": "4_delivery_list"
+                                    },
+                                    {
+                                        "name": "排班列表",
+                                        "code": "4_schedule_list"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "剩退料管理",
+                                "code": "3_leftover_management",
+                                "children": [
+                                    {
+                                        "name": "剩退料列表",
+                                        "code": "4_leftover_list"
+                                    },
+                                    {
+                                        "name": "剩退料审核",
+                                        "code": "4_leftover_censor"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "监控中心",
+                "code": "1_monitoring_center",
+                "children": [
+                    {
+                        "name": "监控管理",
+                        "code": "2_monitoring_management",
+                        "children": [
+                            {
+                                "name": "地图监控",
+                                "code": "3_map_monitoring",
+                                "children": [
+                                    {
+                                        "name": "标注信息",
+                                        "code": "4_callout_information"
+                                    },
+                                    {
+                                        "name": "电子围栏",
+                                        "code": "4_electronic_fence"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "智能调度",
+                                "code": "3_smart_allocation"
+                            },
+                            {
+                                "name": "轨迹回放",
+                                "code": "3_track_playback"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "数据中心",
+                "code": "1_data_center",
+                "children": [
+                    {
+                        "name": "日志管理",
+                        "code": "2_log_management",
+                        "children": [
+                            {
+                                "name": "操作日志",
+                                "code": "3_system_operation_log"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "permission": {
+            "4_construction_part": [
+                "修改",
+                "冻结",
+                "新增"
+            ],
+            "3_system_operation_log": [],
+            "4_construction_site_list": [
+                "修改",
+                "新增",
+                "删除"
+            ],
+            "2_home_page": [],
+            "2_org_and_user": [],
+            "4_platform_parameter_list": [
+                "修改",
+                "恢复"
+            ],
+            "1_base": [],
+            "3_message_management": [],
+            "3_vehicle_scheduling": [],
+            "3_map_monitoring": [],
+            "3_role_and_permission": [],
+            "2_configuration_management": [],
+            "4_organization_list": [
+                "修改",
+                "新增",
+                "删除"
+            ],
+            "2_sim_card_management": [],
+            "4_discussion_group": [],
+            "4_peripheral_polling_configuration": [
+                "修改",
+                "清除",
+                "下发"
+            ],
+            "3_terminal_list": [],
+            "3_sensor_online_upgrade": [],
+            "3_task_management": [],
+            "4_notification": [],
+            "3_track_playback": [],
+            "4_forward_configuration": [],
+            "4_command_parameter_list": [],
+            "3_alarm_parameter_management": [],
+            "3_organization_management": [],
+            "2_monitoring_object": [],
+            "3_sim_card_list": [],
+            "3_workbench": [],
+            "2_peripheral_management": [],
+            "4_factory_list": [
+                "修改",
+                "新增",
+                "删除"
+            ],
+            "4_contract_censor": [
+                "修改",
+                "审核"
+            ],
+            "3_personal_center": [
+                "修改",
+                "重置密码"
+            ],
+            "4_vehicle_list": [
+                "修改",
+                "导入",
+                "新增",
+                "导出",
+                "绑定",
+                "删除",
+                "解绑"
+            ],
+            "4_adas_parameter_list": [],
+            "4_icon_personalise": [],
+            "3_group_management": [],
+            "3_basic_information": [],
+            "2_system": [],
+            "4_intercom_group_list": [],
+            "2_plan_management": [],
+            "4_pouring_method": [
+                "修改",
+                "冻结",
+                "新增"
+            ],
+            "3_user_management": [],
+            "4_people_list": [
+                "修改",
+                "新增",
+                "删除"
+            ],
+            "4_intercom_configuration": [],
+            "3_smart_allocation": [
+                "设为空闲状态",
+                "设为维修状态",
+                "回车",
+                "读取车辆管理器",
+                "修改任务管理器",
+                "派车",
+                "修改车辆管理器",
+                "打印",
+                "调度",
+                "派单",
+                "读取任务管理器",
+                "回单",
+                "取消出车"
+            ],
+            "2_production_management": [],
+            "3_vehicle_management": [],
+            "1_business_management": [],
+            "4_slump": [
+                "修改",
+                "冻结",
+                "新增"
+            ],
+            "2_allocation_management": [],
+            "4_announcement": [],
+            "3_sensor_configuration": [],
+            "4_video_parameter_list": [],
+            "4_electronic_fence": [
+                "解除",
+                "修改",
+                "导入",
+                "新增",
+                "绑定",
+                "删除",
+                "下发"
+            ],
+            "4_customer_list": [
+                "修改",
+                "新增",
+                "删除"
+            ],
+            "1_platform_management": [],
+            "3_video_parameter_management": [],
+            "3_ratio_management": [],
+            "4_hardware_parameter_list": [
+                "修改",
+                "恢复",
+                "下发"
+            ],
+            "4_terminal_list": [
+                "修改",
+                "新增",
+                "删除"
+            ],
+            "1_monitoring_center": [],
+            "4_announcement_management": [],
+            "3_sim_card_property_management": [],
+            "2_log_management": [],
+            "1_hardware_management": [],
+            "4_task_confirmation": [
+                "取消",
+                "确认"
+            ],
+            "4_message": [],
+            "4_concrete_strength": [
+                "修改",
+                "冻结",
+                "新增"
+            ],
+            "4_sim_card_list": [
+                "修改",
+                "新增",
+                "删除",
+                "下发"
+            ],
+            "3_business_property_management": [],
+            "2_monitoring_management": [],
+            "4_schedule_list": [
+                "修改"
+            ],
+            "3_peripheral_configuration": [],
+            "4_delivery_list": [
+                "修改",
+                "打印",
+                "取消"
+            ],
+            "4_contract_list": [
+                "修改",
+                "新增",
+                "删除"
+            ],
+            "2_terminal_management": [],
+            "4_callout_information": [
+                "新增",
+                "删除"
+            ],
+            "3_terminal_property_management": [],
+            "4_task_list": [
+                "修改",
+                "新增",
+                "删除"
+            ],
+            "4_valuation_method": [
+                "修改",
+                "冻结",
+                "新增"
+            ],
+            "4_vehicle_model_list": [],
+            "4_to_do_list": [],
+            "3_contract_management": [],
+            "4_role_list": [
+                "修改",
+                "新增",
+                "删除",
+                "分配用户"
+            ],
+            "4_contract_credit": [],
+            "4_feature_list": [
+                "修改",
+                "冻结",
+                "新增",
+                "取消"
+            ],
+            "4_platform_personalise": [],
+            "4_mortar_price": [
+                "修改",
+                "冻结",
+                "新增"
+            ],
+            "4_leftover_list": [
+                "修改",
+                "打印",
+                "新增",
+                "删除"
+            ],
+            "3_obd_configuration": [],
+            "3_data_dictionary": [],
+            "1_data_center": [],
+            "3_command_parameter_management": [],
+            "3_leftover_management": [],
+            "4_monitoring_group_list": [
+                "修改",
+                "新增",
+                "分配监控人员",
+                "分配监控对象",
+                "删除"
+            ],
+            "3_people_management": [],
+            "3_personalise": [],
+            "4_alarm": [
+                "处理"
+            ],
+            "4_obd_list": [],
+            "4_leftover_censor": [
+                "打印",
+                "审核"
+            ],
+            "3_industry_control": [],
+            "4_system_user_list": [
+                "分配分组",
+                "修改",
+                "新增",
+                "分配角色",
+                "重置密码",
+                "删除"
+            ],
+            "3_material_management": []
+        }
+    }
+}

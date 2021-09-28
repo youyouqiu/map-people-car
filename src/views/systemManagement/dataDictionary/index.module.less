@@ -1,0 +1,148 @@
+@import '../../../less/base.less';
+
+.menu-page-container{
+  overflow-y: scroll;
+  overflow-x: scroll;
+  .flexbox;
+  background-color: #F1F2F5;
+  .flex-direction(row);
+  height:100%;
+  padding:15px;
+  .left-layout{
+    flex-shrink:0;
+    width: 200px;
+    background-color: #fff;
+    margin-right: 5px;
+    .left-dataDictionary-title { 
+      height: 50px;
+      line-height: 50px; 
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+      border-bottom: 3px solid #F1F2F5;
+    }
+  }
+  .right-layout{
+    background-color: #fff;
+    flex-grow: 1;
+    // overflow-x: scroll;
+    min-width: 1500px;
+    min-height: 100%;
+  }
+
+}
+.page-wrapper{
+  min-width: 100%;
+  min-height: 100%;
+  // overflow-x: scroll;
+}
+.right-tabs{
+  // min-width:100%;
+  min-height: 100%;
+  background-color: white;
+  &>:global(.ant-tabs-top-bar){
+      padding-left: 20px;
+      padding-right: 20px;
+      
+  }
+  &.full-height{
+      height:100%;
+      :global(.ant-tabs-content){
+          height:calc(100% - 35px);
+      }
+  }
+}
+.drawer-wrapper{
+  display: flex;
+  min-height: 100%; 
+}
+.my-icon{
+  width: 100%;
+  margin:  0 auto;
+  padding-top: 25px;
+  padding-left: 10px;
+  padding-bottom: 20px;
+  border: 1px solid #f0f0f0;
+  .selectImgBox{
+      padding: 0;
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      border-width: 2px;
+      line-height: 100px;
+      border-style: dashed;
+  }
+  .car-icon-img{
+    max-width: 67px;
+    max-height: 37px;
+    font-size: 12px;
+    line-height: 18px;
+}
+  .icon-img{
+    font-size: 12px;
+    line-height: 18px;
+    max-width: 85px;
+    max-height: 85px;
+  }
+  :global{
+      .ant-radio-button-wrapper{
+          margin-top: 15px;
+          margin-right: 10px;
+        .selectImgBox; 
+        }
+  }
+  .icon-uploadBox{ 
+      width: 100px;
+      height: 100px;
+      margin-top: 15px;
+      margin-right: 10px;
+  } 
+  
+  }
+  .icon-title{
+    position: absolute;
+    top: -16px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #f0f0f0;
+    background-color: #fafafa;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 0 5px;
+    line-height: 35px;
+}
+.flex-bottom{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+  .upload-tip{ 
+    margin-top: 15px;
+    height: 38px;
+    padding: 10px 20px;
+    line-height: 16px;
+    :global{
+        .anticon{
+         background-color: #ffab2d;
+         color: #fff;
+        }
+    } 
+    font-size: 14px;
+    border-radius: 3px;
+    border: 1px solid #ffab2d;
+    background-color: #fffbe6;
+ }
+
+.detail-operation{  
+  .basic-box{ 
+    .scroll-item{
+        flex:1;
+        overflow: hidden;
+    }
+}
+}
+
+
+ 

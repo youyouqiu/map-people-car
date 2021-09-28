@@ -1,0 +1,30 @@
+@import '../../less/base.less';
+.search-monitor-tree{
+    height:100%;
+    width:100%;
+    .flexbox();
+    flex-direction: column;
+
+    .search-input{
+        .flexbox();
+        margin-bottom:10px;
+    }
+
+    .tree-box{
+        flex:1;
+        overflow: hidden;
+        padding-top:10px;
+        border:1px solid @borderColor;
+    }
+
+    .group-monitor-tree{
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    .treeIcon{
+        width: 15px;
+        height:15px;
+        vertical-align: middle;
+    }
+}

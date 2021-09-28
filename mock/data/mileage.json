@@ -1,0 +1,12 @@
+{
+  "code": 200,
+  "msg": "success",
+  "data": [
+    {
+      "monitorId": "92349862049505280",
+      "day": "20200726",
+      "mileage": null,
+      "gpsMile": 5
+    }
+  ]
+}

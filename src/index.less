@@ -1,0 +1,174 @@
+@import '~antd/dist/antd.css';
+
+.App {
+  text-align: center;
+}
+
+.topest-container{
+  height:100%;
+  display:flex;
+}
+
+ul,li{
+  list-style: none;
+  margin:0;
+  padding:0;
+}
+/* span.ant-input-suffix{
+  visibility: hidden;
+}
+.ant-input-affix-wrapper input:focus+span.ant-input-suffix{
+  visibility: visible;
+} */
+.ant-tree-switcher{
+  text-align: right!important;
+}
+.ant-tree-node-content-wrapper{
+  padding: 0!important;
+}
+// table固定表头自适应高度滚动
+.scroll-table{
+  height:100%;
+  
+  .ant-spin-nested-loading
+  ,.ant-spin-container
+  ,.ant-table-fixed-header
+  ,.ant-table-container
+  {
+      height:100%;
+  }
+}
+
+.table-link-btn{
+  padding:0 5px;
+}
+.amap-logo,.amap-copyright{
+    display: none!important;
+}
+
+// 修改抽屉页面错误提示效果
+.ant-drawer-body{
+    overflow-y: auto;
+   .ant-form-item-has-error{
+        border: 1px solid #ff4d4f;
+        .ant-select-selector,.ant-form-item-has-error{
+            border: none;
+        }
+    }
+    .ant-form-item-control{
+        &:hover .ant-form-item-explain{
+            display: block;
+        }
+    }
+    .ant-form-item-explain{
+        position: absolute;
+        display: none;
+        min-width: 100%;
+        left: 0;
+        padding: 2px 10px; 
+        border-radius: 3px;
+        bottom: calc(100% + 11px);
+        transition: 0.3s ease-in-out;
+        border: 1px solid #ff4d4f;
+        background-color: #fff;
+        >div{
+            text-align: justify;
+            white-space: nowrap;
+        }
+        ::after{
+            position: absolute;
+            content: '';
+            width:8px;
+            height: 8px;
+            margin-left: -4px;
+            bottom:-5px;
+            left: 20%;
+            transform: rotate(45deg);
+            border-right: 1px solid #ff4d4f;
+            border-bottom: 1px solid #ff4d4f;
+            background-color: #fff;
+        }
+    }
+    .whiteWrapOk  .ant-form-item-explain{
+        >div{
+            text-align: justify;
+            white-space: normal;
+        }
+    }
+}
+
+::-webkit-scrollbar{
+	width: 8px;
+	height: 8px;
+}
+::-webkit-scrollbar-track{
+	background: #f6f6f6;
+	border-radius: 4px;
+}
+::-webkit-scrollbar-thumb{
+	background: #aaa;
+	border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover{
+	background: #747474;
+}
+::-webkit-scrollbar-corner{
+    background: #f6f6f6; 
+}
+//表单项-位置在下的校验提示
+.formItem-bottom-explain{
+  .ant-form-item-explain{
+    position: absolute;
+    display: none;
+    z-index: 99;
+    min-width: 100%;
+    left: 0;
+    padding: 2px 10px; 
+    border-radius: 3px;
+    bottom: auto;
+    top: calc(100% + 11px);
+    transition: 0.3s ease-in-out;
+    border: 1px solid #ff4d4f;
+    background-color: #fff;
+    >div{
+        text-align: justify;
+        white-space: nowrap;
+    }
+    ::after{
+        position: absolute;
+        content: '';
+        width:8px;
+        height: 8px;
+        margin-left: -4px;
+        top:-5px;
+        left: 20%;
+        transform: rotate(225deg);
+        border-right: 1px solid #ff4d4f;
+        border-bottom: 1px solid #ff4d4f;
+        background-color: #fff;
+    }
+}
+}
+.ant-select.ant-pagination-options-size-changer{
+    min-width: 100px;
+}
+
+.ant-tabs .ant-tabs-top-content.ant-tabs-content-animated, .ant-tabs .ant-tabs-bottom-content.ant-tabs-content-animated{
+    transition:none
+}
+
+// 谷歌地图车牌号显示样式
+.googleMonitorName {
+  position: relative;
+  padding: 4px 3px;
+  display: block;
+  width: 100%;
+  color: #fff !important;
+  margin-bottom: 20px;
+  margin-left: 110%;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, .6);
+}
+.gm-bundled-control-on-bottom{
+  bottom: 120px!important;
+}

@@ -1,0 +1,54 @@
+{
+    "code": 200,
+    "msg": "success",
+    "data": {
+        "id": 1,
+        "name": "北京中位科技",
+        "type": "organization",
+        "monitorType": null,
+        "pid": -1,
+        "children": [
+            {
+                "id": 11,
+                "name": "haha",
+                "type": "organization",
+                "monitorType": null,
+                "pid": 1,
+                "children": null
+            },
+            {
+                "id": 12,
+                "name": "zjc111",
+                "type": "organization",
+                "monitorType": null,
+                "pid": 1,
+                "children": null
+            },
+            {
+                "id": 13,
+                "name": "zjc222",
+                "type": "organization",
+                "monitorType": null,
+                "pid": 1,
+                "children": null
+            },
+            {
+                "id": 14,
+                "name": "add",
+                "type": "organization",
+                "monitorType": null,
+                "pid": 1,
+                "children": [
+                    {
+                        "id": 15,
+                        "name": "insert2",
+                        "type": "organization",
+                        "monitorType": null,
+                        "pid": 14,
+                        "children": null
+                    }
+                ]
+            }
+        ]
+    }
+}

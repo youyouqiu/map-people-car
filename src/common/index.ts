@@ -1,0 +1,22 @@
+// export { default as Table } from './table'
+export { default as Table } from './table/index2'
+export { default as ThirdMenuContainer } from './thirdMenuContainer'
+export { default as FourthMenuContainer } from './fourthMenuContainer'
+export { default as Loading } from './loading'
+export { default as RouterTabs } from './routerTabs/routerTabs'
+export { default as GroupTree } from './groupTree'
+export { default as OrgTree } from './orgTree'
+export { default as Province } from './city/province'
+export { default as City } from './city/city'
+export { default as Area } from './city/area'
+export { default as PublicTreeSelect } from './publicTreeSelect'
+export { default as CustomerTreeSelect } from './customerTreeSelect'
+export { default as Popconfirm } from './popconfirm'
+export { default as CustomerTree } from './customerTree'
+export { default as DetailDrawer } from './detailDrawer'
+export { default as DetailInfo } from './detailInfo'
+export { default as EditDrawer } from './editDrawer'
+export { default as OperatorContainer } from './operatorContainer'
+export { default as TableForm } from './tableForm';
+export { default as ImageWraper } from './imageWraper/index';
+export { default as ReactEcharts } from './reactEcharts';

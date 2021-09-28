@@ -1,0 +1,95 @@
+@HBGColor: #ffffff;
+@DBGColor: #eeeeee;
+@FocusTextColor: #1890ff;
+@ButtonBGColor: #1890ff;
+@InkBarBGColor: #1890ff;
+@InputHoverBorderColor: #40a9ff;
+@ButtonHoverColor: #40a9ff;
+@BoxShadowColor: 'rgb(24 144 255 / 20%)';
+@ReloadIconColor: #000000;
+
+body {
+  .ant-tabs-tab-btn:hover, .ant-tabs-tab-btn:focus, .ant-tabs-tab-remove:focus, .ant-tabs-tab-btn:active, .ant-tabs-tab-remove:active {
+    color: @FocusTextColor;
+  }
+  .ant-tabs-tab.ant-tabs-tab-active{
+    // tab 聚焦文字颜色
+    .ant-tabs-tab-btn {
+      color: @FocusTextColor;
+    }
+    // tab 聚焦右侧图标颜色
+    span {
+      color: @FocusTextColor !important;
+    }
+  }
+  // tab 聚焦底部横线背景颜色
+  .ant-tabs-ink-bar {
+    background: @InkBarBGColor;
+  }
+  // 四级菜单顶部tab背景色
+  .fourth-menu-container {
+    >.ant-tabs-top {
+      >.ant-tabs-nav {
+        background: @HBGColor;
+      }
+    }
+  }
+  // primary类型按钮背景颜色
+  .ant-btn-primary {
+    background: @ButtonBGColor;
+    border-color: @ButtonBGColor;
+  }
+  .ant-btn:hover, .ant-btn:focus {
+    border-color: @ButtonHoverColor;
+    color: @ButtonHoverColor
+  }
+  .ant-btn-primary:hover, .ant-btn-primary:focus{
+    background: @ButtonHoverColor;
+    border-color: @ButtonHoverColor;
+    color: #ffffff;
+  }
+  // 输入框选择边框颜色
+  .ant-input-affix-wrapper:hover, .ant-input-affix-wrapper:focus, .ant-input-affix-wrapper-focused {
+    border-color: @InputHoverBorderColor;
+    box-shadow: 0 0 0 2px @BoxShadowColor;
+  }
+  // 抽屉右侧背景色
+  .drawer-right {
+    background: @DBGColor;
+  }
+  // table表格底部分页颜色
+  .ant-pagination-item-active:focus, .ant-pagination-item-active:hover, .ant-pagination-item-active {
+    border-color: @ButtonHoverColor;
+    a {
+      color: @ButtonHoverColor;
+    }
+  }
+  .ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    border-color: @ButtonHoverColor;
+    box-shadow: 0 0 0 2px @BoxShadowColor;
+  }
+  .ant-select:not(.ant-select-disabled):hover .ant-select-selector{
+    border-color: @ButtonHoverColor;
+  }
+  .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+    background: @BoxShadowColor;
+  }
+  // 刷新按钮
+  .anticon-reload {
+    color: @ReloadIconColor;
+  }
+  // 导航菜单
+  .theme-menu-container {
+    &:hover{
+      .theme-trigger{
+        color: @ButtonBGColor !important;
+      }
+    }
+  }
+  .theme-first-menu-icon, .theme-first-menu-title, .theme-menu-list:hover{
+    color: @ButtonBGColor !important;
+  }
+  .ant-tabs-nav-wrap .ant-tabs-tab:hover {
+    color: @ButtonBGColor !important;
+  }
+}

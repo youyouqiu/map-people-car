@@ -1,0 +1,375 @@
+
+// 右下角作业统计
+.hide{
+   display: none;
+}
+.workStatistics{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    bottom: 0;
+    right:0;
+    z-index: 998;
+    color: #333;
+    border-bottom: none;
+    border: 1px solid rgb(228,228,228);
+    background-color: #fff;
+    transition: all .3s ease-in-out;
+    box-shadow: 0 0 30px -8px rgba(207, 205, 205, 0.8);
+    :global(.ant-progress-line){
+      :global(.ant-progress-text){
+        color: #333;
+        font-weight: bold;
+      }
+    }
+    .header{
+        display: flex;
+        height: 42px;
+        padding: 5px 10px;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgb(240,248,250);
+        h3 {
+            margin: 0;
+            font-size: 14px;
+            span{
+                color:#1890ff;
+            }
+        }
+        >span{
+            cursor: pointer;
+            &:hover{
+                color:#1890ff;
+            }
+        }
+    }
+    .workContent{
+        flex: 1;
+        overflow: hidden;
+        .hide{
+            display: none;
+        }
+        .workBox{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            // height: calc(100vh - 145px);
+            transition: all .3s ease-in-out;
+            &.hideBox{
+                margin-bottom:-100vh;
+            }
+            .scrollContent{
+                flex: 1;
+                padding: 5px 5px 3px;
+                overflow-y: auto;
+            }
+        }
+        .subHeader{
+            display: flex;
+            padding: 3px 10px;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgb(228,228,228);
+            h4 {
+                margin: 0;
+                font-size: 14px;
+                span{
+                    color:#1890ff;
+                }
+            }
+        }
+        .rightIcon{
+          display: flex;
+          align-items: center;
+          img{
+              width: 16px;
+              cursor: pointer;
+              &.trajectory{
+                  width: 15px;
+                  margin-right: 8px;
+              }
+          }
+      }
+        .defaultNum{
+            color: #333;
+        }
+        .onlineNum{
+            color: #1890ff;
+        }
+        .offlineNum{
+            color: rgb(204,153,0);
+        }
+        .rowItem{
+            margin-bottom: 15px;
+            padding: 10px;
+            border-bottom:1px solid #f3f3f3;
+            >div{
+                cursor: pointer;
+                text-align: center;
+                &:hover,&.active{
+                    .numTitle{
+                        color: #1890ff;
+                    }
+                }
+            }
+            strong{
+                font-size: 20px;
+            }
+            .numTitle{
+                transition: all .3s ease-in-out;
+            }
+        }
+        
+        .statusTabs{
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+            padding: 0 5px;
+            // justify-content: space-evenly;
+            background-color: rgb(228,228,228);
+            .statusTab{
+              // flex: auto;
+              min-width: 20%;
+              max-width: 30%;
+              height: 40px;
+              line-height: 40px;
+              text-align: center;
+              cursor: pointer;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              transition: all .3s ease-in-out;
+              &:hover,&.active{
+                  color: #1890ff;
+              }
+            }
+        }
+        .itemBox{
+            padding: 6px 6px 15px;
+            font-size: 13px;
+            cursor: pointer;
+            border: 1px solid #f3f3f3;
+            .itemInfo{
+                display: flex;
+                margin-bottom: 6px;
+                .itemStatus{
+                    flex: 1;
+                    p{
+                        display: flex;
+                        margin-bottom: 5px;
+                        justify-content: space-between;
+                        span:first-child{
+                            color: #333;
+                        }
+                    }
+                }
+            }
+            .shiftInfo{
+                display: flex;
+                span{
+                    flex: 1;
+                    &:nth-child(2){
+                        text-align: center;
+                    }
+                    &:last-child{
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+    .workTabs{
+        display: flex;
+        border: 1px solid rgb(228,228,228);
+        .workTab{
+            flex: 1;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+            background-color: rgb(228,228,228);
+            span{
+                color:#1890ff;
+            }
+            &.activeTab{
+                color:#1890ff;
+                background-color:#fff;
+            }
+            &:hover{
+                color:#1890ff;
+            }
+        }
+    }
+}
+.greenyellow{
+    color: rgb(0,195,0)!important;
+}
+.green{
+    color: #78af3a!important;
+}
+.red{
+    color: red!important;
+}
+.blue{
+    color:#1890ff!important;
+}
+
+.spinning{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255,255,255,.6);
+    &.loading{
+      padding-top: 30%;
+      justify-content: flex-start;
+    }
+  }
+  .betweenFlexBox{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .recordHeader{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+    padding-bottom:5px;
+    h4{
+      font-weight: bold;
+      margin: 0;
+    }
+    .workName{
+      flex: 1;
+      padding: 0 6px;
+      color: #1890ff;
+      text-align: center;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  // 机器作业
+  .machineOperation{
+    color: #333;
+    .listItem{
+      padding: 20px 0 20px 10px;
+      .leftBox{
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #1890ff;
+      }
+    }
+    td{
+      padding: 0px!important;
+    }
+    .leftMarginSix{
+      margin-left: 6px;
+    }
+  }
+  .rotate{
+    transform: rotate(90deg);
+    cursor: pointer;
+    &:hover{
+      color:#1890ff;
+    }
+  }
+  .infoBox{
+    padding: 15px;
+    >div{
+      margin-bottom: 6px;
+      >span{
+        margin-left: 10px;
+      }
+    }
+  }
+
+  // 作业详情
+  .operationDeatil{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .header{
+      padding: 5px 10px;
+      align-items: center;
+      justify-content: space-between;
+      background-color: rgb(240,248,250);
+      h4 {
+        margin: 0;
+        font-size: 14px;
+        font-weight: bold;
+        span{
+            color:#333;
+        }
+      }
+      .blueSelect{
+        color:#1890ff;
+        :global(.ant-select-arrow){
+          color:#1890ff;
+        }
+      }
+    }
+  }
+
+  .rightInfo{
+    font-size: 12px;
+    text-align: center;
+    color: #888;
+  }
+  .rightBtn{
+    button{
+      margin-right: 15px;
+    }
+  }
+  .itemImg{
+    height: 110px;
+    padding:4px;
+    display: flex;
+    align-items: center;
+    img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 1px solid #f0f0f0;
+    }
+}
+.listTable{
+  td{
+    padding: 2px!important;
+    &:hover{
+      background-color: transparent!important;
+    }
+  }
+}
+.rightSelect{
+  color: #1890ff;
+  // border: 1px solid #1890ff;
+  >span{
+    margin-right: -6px;
+  }
+}
+.typeTabs{
+  display: flex;
+  padding: 4px;
+  background-color: rgb(228, 228, 228);
+  .typeTab{
+    flex: 1;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,53 @@
+.shouldBorder {
+    > div {
+        border-bottom: 1px solid #f0f0f0;
+        border-right: 1px solid #f0f0f0;
+        border-left: 1px solid #f0f0f0;
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+.box {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    border-top: none;
+    padding-right: 9px;
+    .work-type {
+        margin-bottom: 0;
+        width: 140px;
+        line-height: 35px;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.65);
+        font-size: 14px;
+        font-weight: bold;
+        border-right: 1px solid #f0f0f0;
+        background: #fafafa;
+    }
+    .data {
+        display: flex;
+        margin-bottom: 0px;
+        width: 100%;
+        text-align: center;
+        color: rgba(0, 0, 0, 0.65);
+        font-size: 14px;
+        line-height: 1.5715;
+        font-weight: bold;
+        align-items: center;
+        .mode {
+            margin: 0;
+        }
+        .select {
+            margin-right: 10px;
+            width: 98px;
+        }
+        .input-num {
+            width: 53px;
+        }
+        .text {
+            line-height: 35px;
+            margin: 0 7px;
+        }
+    }
+}

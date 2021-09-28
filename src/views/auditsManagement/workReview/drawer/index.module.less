@@ -1,0 +1,91 @@
+@import '../../../../less/base.less';
+// import tool from '@/static/image/tool.svg';
+
+.date-picker{
+    width:100%;
+}
+
+// 详情抽屉
+.detail-wrapper{
+    .flexbox();
+    height:100%;
+    
+    .left-box{
+        flex: 1;
+        background-color: #fff;
+        height:100%;
+        padding:0 0 0 24px;
+        overflow: hidden;
+
+        .tit{
+            color:#333;
+        }
+        .con{
+            color: #757373;
+            margin-top:5px;
+        }
+    }
+
+    .tab-pane{
+        .flexbox();
+        .flex-direction(column);
+    }
+}
+
+.loading{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255,255,255,.6);
+}
+
+
+
+.oldWordTitle{
+    width: 100%;
+    background: #eee;
+    font-size: 15px;
+    margin-bottom: 0;
+    padding: 8px 5px;
+}
+
+
+.intentionLable{
+    width: 90px;
+    height: 50px;
+    margin-left: 20px;
+    font-size: 15px;
+    line-height: 50px;
+    color: #000;
+}
+
+.point {
+    position: relative;
+    span{
+        position: absolute;
+        top: 0;
+        right: -5px;
+        width: 6px;
+        height: 6px;
+        background: red;
+        border-radius: 50%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

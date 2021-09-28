@@ -1,0 +1,43 @@
+.commonTable-container{
+  height: 100%;
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  min-height: 245px;
+  .common-table-container{
+    
+    &, td, th{
+      border: 1px solid #f0f0f0;
+    }
+    .common-table-tr{
+      cursor: pointer;
+      &:hover{
+        background: #f0f0f0;
+      }
+      &.active{
+        background: #dcf5ff;
+        color: #595959;
+      }
+    }
+    .common-table-th{
+      background: #f0f0f0;
+    }
+    .common-table-th,.common-table-td{
+      padding: 6px;
+      div{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+  .commonTable-tbody{
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: absolute;
+    top: 44px;
+    left: 0;
+    min-width: 100%;
+    bottom: 0;
+  }
+}

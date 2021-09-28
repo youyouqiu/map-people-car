@@ -1,0 +1,51 @@
+.role-detail-container{
+  display: flex;
+  height: 100%;
+  .role-left{
+    flex: 1;
+  }
+  .role-info{
+    display: flex;
+    // align-items: center;
+    justify-content: space-around;
+    margin: 0 16px;
+    color: #999;
+    border-bottom: 1px solid #d9d9d9;
+    .role-info-item{
+      flex: 1;
+      word-break: break-all;
+      word-wrap: normal;
+      margin-right: 8px;
+    }
+  }
+  .role-permission{
+    .tree-container{
+      border: 1px solid #eee;
+      padding: 12px;
+      height: calc(100vh - 400px);
+      overflow: auto;
+    }
+  }
+  .role-right{
+    width: 190px;
+    background-color: #f0f0f0;
+    line-height: 1.5715;
+    padding: 0 20px;
+    .role-right-title{
+      padding: 12px 0;
+      margin-bottom: 20px;
+    }
+    button{
+      margin: 12px 0;
+    }
+  }
+  .tab-title{
+    border:1px solid #eee;
+    border-bottom: 0;
+    background: #f5f5f5; 
+    font-size: 15px;
+    text-align: center;
+    height: 35px;
+    line-height: 34px; 
+  }
+}

@@ -1,0 +1,50 @@
+{
+    "code": 200,
+    "msg": "success",
+    "data": {
+        "lastLocation": {
+            "address": "string",
+            "gpsSpeed": 0,
+            "gpsTime": "string",
+            "latitude": 0,
+            "longitude": 0,
+            "monitorId": 0,
+            "monitorName": "string",
+            "reverseAddressSwitch": "string"
+        },
+        "workMonitorDto": {
+            "enterpriseName": "string",
+            "gpsSpeed": 0,
+            "iconUrl": "string",
+            "monitorId": 0,
+            "monitorName": "string",
+            "monitorType": 0,
+            "name": "string",
+            "onWorkStatus": 0,
+            "photoUrl": "string",
+            "professionalsList": [
+                {
+                    "id": 0,
+                    "name": "string",
+                    "number": "string"
+                }
+            ],
+            "shiftEnd": "string",
+            "shiftName": "string",
+            "shiftStart": "string",
+            "shiftType": 0,
+            "terminalPhoneNum": "string",
+            "type": "string",
+            "typeId": 0,
+            "workStatus": 0
+        },
+        "workObjectList": [
+            {
+                "id": 0,
+                "name": "string",
+                "type": 0,
+                "typeName": "string"
+            }
+        ]
+    }
+}

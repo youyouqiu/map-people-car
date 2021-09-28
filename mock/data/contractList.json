@@ -1,0 +1,47 @@
+{
+    "code": 200,
+    "msg": "success",
+    "data": [{
+            "id": "1",
+            "isActive": 1,
+            "contractNum": "QWS123S",
+            "contractName": "帅哥合同",
+            "sponser": "中位科技有限公司",
+            "bdNum": 54123132,
+            "bdName": "奥术大师",
+            "leaderName": "中位",
+            "leaderPhone": "1326546644",
+            "registerDate": "2050-20-10",
+            "updateDataTime": "2050-20-20 15:00:13",
+            "updateDataUsername": "admin"
+        },
+        {
+            "id": "2",
+            "isActive": 1,
+            "contractNum": "QWS123S",
+            "contractName": "帅哥合同",
+            "sponser": "中位科技有限公司",
+            "bdNum": 54123132,
+            "bdName": "奥术大师",
+            "leaderName": "中位",
+            "leaderPhone": "1326546644",
+            "registerDate": "2050-20-10",
+            "updateDataTime": "2050-20-20 15:00:13",
+            "updateDataUsername": "admin"
+        },
+        {
+            "id": "3",
+            "isActive": 0,
+            "contractNum": "QWS123S",
+            "contractName": "帅哥合同",
+            "sponser": "中位科技有限公司",
+            "bdNum": 54123132,
+            "bdName": "奥术大师",
+            "leaderName": "中位",
+            "leaderPhone": "",
+            "registerDate": "2050-20-10",
+            "updateDataTime": "2050-20-20 15:00:13",
+            "updateDataUsername": "admin"
+        }
+    ]
+}

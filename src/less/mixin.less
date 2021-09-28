@@ -1,0 +1,116 @@
+/*文字省略*/
+.ellipse(@width:100%){
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    width:@width;
+  }
+  
+  /*
+透明度 或渐变 1为不透明 0透明
+css3 rgba(110, 142, 185, .4)!important;前三个是颜色值 后一个是透明值
+用来兼容所有浏览器
+*/
+.rgba(@rgba_a:.4,@rgb_b:40){
+    filter: alpha(opacity=@rgb_b);
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=@{rgb_b})";
+    opacity:@rgba_a;
+  }
+  
+  /*
+  透明背景
+  @bg:背景色
+  */
+  .bg-rgba(@bg:rgba(43, 48, 77, 0.7)){
+    background-color: @bg;
+    -webkit-background-color: @bg;
+    -moz-background-color: @bg;
+  }
+
+  /*flex*/
+.flexbox() {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+/*主轴方向
+new:默认水平row
+(row | column)
+old:默认水平horizontal
+(horizontal | vertical)
+*/
+.flex-direction(@dr) when(@dr = row){
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+}
+.flex-direction(@dr) when(@dr = column){
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+}
+.flex-direction(@dr){
+  flex-direction: @dr;
+}
+
+.flex-wrap(@fw) when (@fw = nowrap) {
+  -webkit-box-lines: single;
+  -moz-box-lines: single;
+}
+.flex-wrap(@fw) when (@fw = wrap) {
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+}
+.flex-wrap(@fw){
+  flex-wrap: @fw;
+}
+/*对齐方式
+justify-content:新版本参数space-between
+（flex-start：左对齐 | flex-end：右对齐 | center：居中对齐 | space-between：两端对齐 | space-around：相等间隔）
+box-pack:旧版本参数justify
+（start | end | center | justify）
+*/
+.justify-content(@jc) when (@jc = flex-start) {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+}
+.justify-content(@jc) when (@jc = flex-end) {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+}
+.justify-content(@jc) when (@jc = space-between) {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+}
+.justify-content(@jc){
+  justify-content: @jc;
+}
+/*项目对齐
+（flex-start：起点对齐 | flex-end：终点对齐 | center；中点对齐 | baseline：文字的基线对齐 | stretch：占满整个容器的高度）
+*/
+.align-items(@ai) when (@ai = flex-start) {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+}
+.align-items(@ai) when (@ai = flex-end) {
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+}
+.align-items(@ai){
+  align-items: @ai;
+}
+/*多根轴线的对齐方式
+align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+*/
+.align-content(@ai:space-between) {
+  -ms-flex-line-pack: @ai;
+  -webkit-align-content: @ai;
+  align-content: @ai;
+}
+/*单个对齐不一致
+（auto：继承父元素 |flex-start：起点对齐 | flex-end：终点对齐 | center；中点对齐 | baseline：文字的基线对齐 | stretch：占满整个容器的高度）
+*/
+.align-self(@as) {
+  -ms-flex-item-align: @as;
+  -webkit-align-self: @as;
+  align-self: @as;
+}

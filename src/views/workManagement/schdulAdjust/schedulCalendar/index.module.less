@@ -1,0 +1,70 @@
+.box {
+    display: flex;
+    height: 100%;
+    .tree {
+        position: relative;
+        border-right: 1px solid #f0f0f0;
+        transition: all 0.1s;
+        position: relative;
+        padding-top: 9px;
+        > div:first-child {
+            min-width: 0;
+        }
+        .arrow {
+            position: absolute;
+            padding: 4px;
+            transition: all 0.3s;
+            left: 7px;
+            top: 14px;
+        }
+    }
+
+    .show {
+        width: 350px;
+        .arrow {
+            transform: rotate(0deg);
+        }
+    }
+
+    .hide {
+        width: 0;
+        .arrow {
+            transform: rotate(-180deg);
+        }
+    }
+
+    .calendar {
+        width: 100%;
+        height: 100%;
+        margin: 0px 19px;
+        .head {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 30px 10px 30px;
+            height: 52px;
+            line-height: 30px;
+            border-bottom: 1px solid #d6cdcd;
+            .p1 {
+                display: flex;
+                align-items: center;
+                .pass {
+                    margin-left: 20px;
+                    color: green;
+                }
+                .nopass {
+                    margin-left: 10px;
+                }
+            }
+            p {
+                margin-bottom: 0;
+            }
+            span {
+                color: #16b913;
+                margin: 0 10px;
+            }
+        }
+        .wrap {
+            height: calc(100% - 52px);
+        }
+    }
+}

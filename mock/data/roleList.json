@@ -1,0 +1,59 @@
+{
+    "code": 200,
+    "msg": "success",
+    "data": [
+        {
+            "id": "74696109890723840",
+            "code": "ROLE_1b4407f5-b699-46b9-ab73-e89c0cb86a03",
+            "numOfUser": 11,
+            "name": "666",
+            "priority": 1,
+            "description": "",
+            "editable": 1,
+            "createDataTime": "2020-06-05 18:47:20",
+            "createDataUsername": "t",
+            "updateDataTime": "2020-06-24 09:02:31",
+            "updateDataUsername": "t"
+        },
+        {
+            "id": "74217660348620800",
+            "code": "ROLE_59e93df0-c2ac-44fb-84c6-dd02406f7352",
+            "numOfUser": 9,
+            "name": "顶顶顶顶",
+            "priority": 1,
+            "description": "修改角色测试新增数据1111",
+            "editable": 1,
+            "createDataTime": "2020-06-04 11:06:09",
+            "createDataUsername": "t",
+            "updateDataTime": "2020-06-04 11:29:12",
+            "updateDataUsername": "admin"
+        },
+        {
+            "id": "74195489526112256",
+            "code": "ROLE_2af7abaf-f777-46dc-9a39-f84d2ef5a8a3",
+            "numOfUser": 11,
+            "name": "智能调度只有页面权限",
+            "priority": 1,
+            "description": "",
+            "editable": 1,
+            "createDataTime": "2020-06-04 09:38:03",
+            "createDataUsername": "t",
+            "updateDataTime": "2020-06-04 09:38:03",
+            "updateDataUsername": "t"
+        },
+        {
+            "id": "1000",
+            "code": "ROLE_ADMIN",
+            "numOfUser": 21,
+            "name": "普2通2管2理员1",
+            "priority": 1,
+            "description": "普通管理员",
+            "editable": 1,
+            "createDataTime": "2020-06-03 09:46:54",
+            "createDataUsername": "2019-11-15 10:18:19",
+            "updateDataTime": "2020-06-05 16:30:48",
+            "updateDataUsername": "admin"
+        }
+    ],
+    "total": "4"
+}
