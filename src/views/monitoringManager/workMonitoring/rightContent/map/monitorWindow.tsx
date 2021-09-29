@@ -16,6 +16,7 @@ interface IProps {
   goTrackBack: Function,
   setfocusingTrackInfo: Function,
   changeVideoMonitroInfo: Function,
+  refs: any,
 }
 
 const MonitorWindow = (props: IProps) => {
@@ -121,13 +122,13 @@ const MonitorWindow = (props: IProps) => {
         </div>
         <div className={styles.windowFooter}>
           <div>
-            {isVideo && <button onClick={() => props.changeVideoMonitroInfo()}>
+            {isVideo && <button ref={props.refs.videoAciveEl} onClick={() => props.changeVideoMonitroInfo()}>
               <img width='20' src={videoAcive} alt="视频" /> 视频
             </button>}
-            <button onClick={() => props.goTrackBack()}>
+            <button ref={props.refs.trajectoryEl} onClick={() => props.goTrackBack()}>
               <img className={styles.trajectory} src={trajectory} alt="轨迹" /> 轨迹
             </button>
-            <button onClick={() => props.setfocusingTrackInfo()}>
+            <button ref={props.refs.trackingEl} onClick={() => props.setfocusingTrackInfo()}>
               <img className={styles.tracking} src={tracking} alt="跟踪" /> 跟踪
             </button>
           </div>
@@ -172,10 +173,10 @@ const MonitorWindow = (props: IProps) => {
         </div >
         <div className={styles.windowFooter}>
           <div>
-            <button onClick={() => props.goTrackBack()}>
+            <button ref={props.refs.trajectoryEl} onClick={() => props.goTrackBack()}>
               <img className={styles.trajectory} src={trajectory} alt="轨迹" /> 轨迹
             </button>
-            <button onClick={() => props.setfocusingTrackInfo()}>
+            <button ref={props.refs.trackingEl} onClick={() => props.setfocusingTrackInfo()}>
               <img className={styles.tracking} src={tracking} alt="跟踪" /> 跟踪
             </button>
           </div>

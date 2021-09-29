@@ -81,7 +81,7 @@ class Toolbar extends Component<IProps, IState> {
     super(props)
     this.measurementTool = null;
     this.state = {
-      mapSetVisible: false,// 地图设置项显示隐藏
+      mapSetVisible: true,// 地图设置项显示隐藏
       toolMenuVisible: false,// 下拉菜单显示隐藏
       mapType: 'amap',// 默认为标准地图
       amapLevel2Value: 'standardMap', //高德二级菜单

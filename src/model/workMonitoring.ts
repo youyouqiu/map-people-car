@@ -1,6 +1,7 @@
 /**
  * 作业监控
  */
+import { State } from "webpackbar";
 import { Model } from "../framework/d.ts/model"
 import { getStore } from "../framework/utils/localStorage";
 
@@ -26,6 +27,7 @@ export type StateType = {
   topChangeStatus: boolean;
   detailMonitorInfo: any;
   videoParam: any;
+  mapType: string;
 }
 
 export interface INodeItem {
@@ -69,7 +71,8 @@ const WorkMonitoring: Model<StateType> = {
     workObjectList: [],// 作业内容显示数据
     activeWorkId: '',// 当前显示的作业对象id(点击监控对象的时候,设置为它所属的作业对象id)
     detailMonitorInfo: null,// 作业详情模块显示的监控对象信息
-    videoParam: null //实时视频监控对象信息
+    videoParam: null, //实时视频监控对象信息
+    mapType: 'amap'
   },
   reducers: {
     start: function (state: StateType) {
@@ -97,6 +100,14 @@ const WorkMonitoring: Model<StateType> = {
 
       return state;
     },
+    // toggleMapType: function (state: StateType, action: any) {
+    //   const { payload: { key, data } } = action;
+
+
+
+    //   console.log('state', state)
+    //   return state;
+    // }
   },
   sagas: {
     // 改变选中树节点

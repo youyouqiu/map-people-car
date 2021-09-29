@@ -48,6 +48,9 @@ const monitorNameMarkerMap: any = {// 存放监控对象名称marker集合Map<nu
   vehicle: new Map()
 };
 const MapComponent = memo(() => {
+  const videoAciveEl = useRef(null);
+  const trajectoryEl = useRef(null);
+  const trackingEl = useRef(null);
   const history = useHistory();
   const refObj: any = useRef({
     wakePolyline: null,// 尾迹线段
@@ -83,7 +86,7 @@ const MapComponent = memo(() => {
   const [workObjectGraph, setWorkObjectGraph] = useState<any>();
 
   // 连接redux数据
-  const { globalSocket, mapCenterPos, mapSection, mapWorkObject, mapMonitor, focusingTrack, focusMonitor, monitorStatusMap } = useSelector(({
+  const { globalSocket, mapCenterPos, mapSection, mapWorkObject, mapMonitor, focusingTrack, focusMonitor, monitorStatusMap, currentSelectTreeNode } = useSelector(({
     workMonitoring: {
       mapCenterPos,// 地图中心点经纬度
       mapSection,// 地图显示的标段数据
@@ -129,6 +132,16 @@ const MapComponent = memo(() => {
       }
     }
   }
+
+  useEffect(() => {
+    if (workObjectGraph) {// 移除之前的作业对象
+      const deleteGraph: any = [];
+      Object.keys(workObjectGraph).map(key => {
+        deleteGraph.push(workObjectGraph[key]);
+      })
+      if (mapWrapper) mapWrapper.map.remove(deleteGraph);
+    }
+  }, [currentSelectTreeNode])
 
   // 监控对象状态变化,改变marker显示状态
   useEffect(() => {
@@ -776,6 +789,8 @@ const MapComponent = memo(() => {
    * 跳转作业回放
    */
   const goTrackBack = function () {
+    console.log('goTrackBack');
+    
     const { monitorKey, workType, monitorName } = infoMonitor;
     channel.trigger(`/view/monitoringManager/workPlayback?key=${monitorKey}&name=${monitorName}&workType=${workType}`);
     history.replace(`/view/monitoringManager/workPlayback?key=${monitorKey}&name=${monitorName}&workType=${workType}`);
@@ -814,10 +829,10 @@ const MapComponent = memo(() => {
     infoMonitor.workType = workType;
     infoMonitor.monitorKey = monitorKey;
     const windowDiv = document.createElement('div');
-    ReactDOM.render(<MonitorWindow data={result} changeVideoMonitroInfo={changeVideoMonitroInfo} goTrackBack={goTrackBack} setfocusingTrackInfo={setfocusingTrackInfo} />, windowDiv);
+    ReactDOM.render(<MonitorWindow data={result} changeVideoMonitroInfo={changeVideoMonitroInfo} goTrackBack={goTrackBack} setfocusingTrackInfo={setfocusingTrackInfo} refs={{videoAciveEl, trajectoryEl, trackingEl}} />, windowDiv);
     infoWindow.setContent(windowDiv);
     // 打开信息窗体
-    infoWindow.open(mapWrapper?.map, marker);
+    infoWindow.open(mapWrapper?.map, marker, windowDiv, lnglat, {changeVideoMonitroInfo, goTrackBack, setfocusingTrackInfo}, {videoAciveEl, trajectoryEl, trackingEl});
   }
 
   /**

@@ -3,7 +3,6 @@
 // 地图类型
 type MapType = 'standardMap' | 'threeDimensionalMap' | 'dimensionalMap';
 let trafficType: any = false;
-let contentLngLat: Array<any> = [0, 0];
 // 高德经纬度转换为百度经纬度
 const _AMapTransLngLatBMap = (data: Array<any>) => {
   const X_PI: number = Math.PI * 3000.0 / 180.0;
@@ -93,11 +92,23 @@ export const mapFunsObj = {
    */
   setFitView: function (option: any) {
     console.log(option, 'option 可视范围');
-    let bounds = this.getBounds();
-    if (option._bounds) {
-      bounds = option._bounds;
+    // let bounds = this.getBounds();
+    let points = [{lng: 116.403694, lat: 39.927552}];
+    let newPoints = [];
+    if (option.points) {
+      newPoints = option.points;
+      points = [];
+    } else if (option[0] && option[0].points) {
+      newPoints = option[0].points;
+      points = [];
     }
-    this.setBounds(bounds);
+    if (newPoints.length > 0) {
+      for (let i = 0; i < newPoints.length; i++) {
+        points.push(newPoints[i].latLng);
+      }
+    }
+    // this.setBounds(bounds);
+    this.setViewport(points);
   },
 
   /**
@@ -124,14 +135,28 @@ export const mapFunsObj = {
     console.log(option, 'option 点标记');
     let newPoint: Array<any> = [[0, 0]];
     let bMapPoint: Array<any> = [];
+    let labelPoint: Array<any> = [[0, 0]];
+    let bMapLabelPoint: Array<any> = [];
+    const offsetStyle: any = option.offset;
     const point: any = option.position;
     if (point && point[0]) {
       newPoint = _AMapTransLngLatBMap([point]);
     }
     bMapPoint = new (BMapGL as any).Point(newPoint[0][0], newPoint[0][1]);
-    const markerIcon = new (BMapGL as any).Icon(option.icon || '../../static/image/people.png', new (BMapGL as any).Size(38, 48));
+    const markerIcon = new (BMapGL as any).Icon(option.icon || '/no.img', new (BMapGL as any).Size(40, 50));
     const marker = new (BMapGL as any).Marker(bMapPoint, {
       icon: markerIcon,
+    });
+    // 创建文本标注对象
+    const label = new (BMapGL as any).Label(option.content, {
+      position: bMapPoint,
+      offset: new (BMapGL as any).Size(offsetStyle.lng, offsetStyle.lat),
+    });
+    // 自定义文本标注样式
+    label.setStyle({
+      backgroundColor: 'rgba(0,0,0,0)',
+      borderColor: 'rgba(0,0,0,0)',
+      zIndex: option.zIndex,
     });
     const markerZIndex = option.zIndex || 999;
     marker.getzIndex = function () {
@@ -139,12 +164,15 @@ export const mapFunsObj = {
     };
     marker.setzIndex = marker.setZIndex;
     marker.oldsetPosition = marker.setPosition;
-    marker.setPosition = function (point: any) {
-      if (point[0]) {
-        marker.oldsetPosition({ lng: point[0], lat: point[1] });
+    marker.setPosition = function (setPoint: any) {
+      if (setPoint[0]) {
+        labelPoint = _AMapTransLngLatBMap([setPoint]);
       } else {
-        marker.oldsetPosition(point);
+        labelPoint = _AMapTransLngLatBMap([[setPoint.lng, setPoint.lat]]);
       }
+      bMapLabelPoint = new (BMapGL as any).Point(labelPoint[0][0], labelPoint[0][1]);
+      marker.oldsetPosition(bMapLabelPoint);
+      label.setPosition(bMapLabelPoint);
     };
     marker.setContent = function () {
       return null;
@@ -155,6 +183,7 @@ export const mapFunsObj = {
     marker.hide = function () {
       this.removeOverlay(marker);
     };
+    marker.setLabel(label);
     this.addOverlay(marker);
     return marker;
   },
@@ -172,11 +201,9 @@ export const mapFunsObj = {
       let newPoint: Array<any> = [[0, 0]];
       let bMapPoint: Array<any> = [];
       const point: any = item.lnglat;
-      const name = item.name;
       if (point && point[0]) {
         newPoint = _AMapTransLngLatBMap([point]);
       }
-      contentLngLat = newPoint;
       bMapPoint = new (BMapGL as any).Point(newPoint[0][0], newPoint[0][1]);
       const markerIcon = new (BMapGL as any).Icon(
         style.url || '../../static/image/point_purple.png',
@@ -187,23 +214,6 @@ export const mapFunsObj = {
         icon: markerIcon,
       });
       markerArr.push(marker);
-      // 创建文本标注对象
-      const label = new (BMapGL as any).Label(name, {
-        position: new (BMapGL as any).Point(newPoint[0][0], newPoint[0][1]),
-        offset: new (BMapGL as any).Size(38, -30),
-      });
-      // 自定义文本标注样式
-      label.setStyle({
-        color: 'rgb(255,255,255)',
-        backgroundColor: 'rgba(0,0,0,0.7)',
-        borderColor: 'rgba(0,0,0,0.7)',
-        borderRadius: '8px',
-        fontSize: '14px',
-        height: '30px',
-        lineHeight: '30px',
-        padding: '0 20px',
-      });
-      marker.setLabel(label);
       this.addOverlay(marker);
     }
     return markerArr;
@@ -262,22 +272,37 @@ export const mapFunsObj = {
   infoWindow: function (option: any) {
     console.log(option, 'option 信息弹窗');
     let isOpen = false;
-    const mapWindow = new (BMapGL as any).InfoWindow(option.content, {
+    let mapWindow = new (BMapGL as any).InfoWindow(option.content, {
       width: 380,
       height: 480,
+      offset: new (BMapGL as any).Size(20, -16),
       title: '',
       message: '这里是故宫',
     });
-    mapWindow.open = function (map: any, marker: any) {
-      console.log(map, 'map 信息弹窗');
-      console.log(marker, 'marker 信息弹窗');
-      const newBMapPoint = new (BMapGL as any).Point(contentLngLat[0][0], contentLngLat[0][1]);
-      this.openInfoWindow(mapWindow, newBMapPoint);
+    // mapWindow.newOpen = mapWindow.open;
+    mapWindow.open = function (map: any, marker: any, windowContent: any, windowLngLat: any, funcsObj: any, refs: any) {
+      const newWindowLngLat = _AMapTransLngLatBMap([windowLngLat]);
+      mapWindow = new (BMapGL as any).InfoWindow(windowContent, {
+        width: 380,
+        height: 480,
+        offset: new (BMapGL as any).Size(20, -16),
+        title: '',
+        message: '这里是故宫',
+      });
+      const newBMapPoint = new (BMapGL as any).Point(newWindowLngLat[0][0], newWindowLngLat[0][1]);
+      // 百度地图信息弹窗setPosition、open事件无法定位并打开窗口
+      // mapWindow.setPosition(newBMapPoint);
+      map.openInfoWindow(mapWindow, newBMapPoint);
+      mapWindow.newClose = mapWindow.close;
+      if (refs && funcsObj) {
+        refs.videoAciveEl.current ? refs.videoAciveEl.current.onclick = funcsObj.changeVideoMonitroInfo : null;
+        refs.trajectoryEl.current ? refs.trajectoryEl.current.onclick = funcsObj.goTrackBack : null;
+        refs.trackingEl.current ? refs.trackingEl.current.onclick = funcsObj.setfocusingTrackInfo : null;
+      }
       isOpen = true;
     };
-    mapWindow.newClose = mapWindow.close;
     mapWindow.close = function () {
-      mapWindow.close();
+      mapWindow.newClose();
       isOpen = false;
     };
     mapWindow.getIsOpen = function () {
